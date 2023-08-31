@@ -11,7 +11,7 @@ import APIManager from '../utils/api';
 import trash from '../images/Trash.svg';
 
 function Photo(props) {
-  const parts = props.photoAvatar.split("\\"); // Split the string on the backslash character
+  const parts = props.photoAvatar.split("/"); // Split the string on the backslash character
   const avatarName = parts[parts.length - 1];
 
   return (

@@ -38,7 +38,7 @@ const Photogallery = (props) => {
   const [showNextElement, setShowNextElement] = useState(false);
   const [currentIndex, setCurrentIndex] = useState(0);
 
-  // const parts = props.photoAvatar.split("\\"); // Split the string on the backslash character
+  // const parts = props.photoAvatar.split("/"); // Split the string on the backslash character
   // const avatarName = parts[parts.length - 1];
 
   
@@ -56,7 +56,7 @@ const Photogallery = (props) => {
   const getUserAvatar = async () => {
     try {
       const json = await APIManager.getUserData();
-      const parts = json.avatar.split("\\"); // Split the string on the backslash character
+      const parts = json.avatar.split("/"); // Split the string on the backslash character
       const avatarName = parts[parts.length - 1];
       setUserAvatar({
         avatar: json.avatar,
@@ -103,7 +103,7 @@ const Photogallery = (props) => {
   // Function to open the photo popup and set the selected photo index
   const openPhoto = (photo, index) => {
     console.log('photo = ', photo)
-    const parts = photo.ownerAvatar.split("\\"); // Split the string on the backslash character
+    const parts = photo.ownerAvatar.split("/"); // Split the string on the backslash character
     photo.ownerAvatar = parts[parts.length - 1];
     setCurrentIndex(index);
     

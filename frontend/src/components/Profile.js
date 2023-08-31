@@ -159,7 +159,7 @@ const Profile = (props) => {
       const json = await response.json();
       console.log('getUserData json = ', json)
 
-      const parts = json.avatar.split("\\"); // Split the string on the backslash character
+      const parts = json.avatar.split("/"); // Split the string on the backslash character
       const avatarName = parts[parts.length - 1];
 
       setUserData((prevUserData) => ({
