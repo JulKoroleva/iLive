@@ -1,0 +1,62 @@
+@import url(./vendor/normalize.css);
+
+@import url(./blocks/header/header.css);
+
+@import url(./blocks/form/form.css);
+@import url(./blocks/page/page.css);
+@import url(./blocks/footer/footer.css);
+@import url(./blocks/mobile-menu/mobile-menu.css);
+
+  
+body {
+  display: flex;
+  justify-content: center;
+  background-color: white;
+  overflow-x: hidden;
+  width: 100vw;
+  padding: 0px;
+  user-select: none;
+}
+
+body::-webkit-scrollbar {
+  width: 10px;  
+}
+
+body::-webkit-scrollbar-track {
+  -webkit-box-shadow: 5px 5px 5px -5px rgba(34, 60, 80, 0.2) inset;
+  background-color: #f9f9fd;
+  border-radius: 10px;
+} 
+
+body::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background: linear-gradient(180deg, #9ca6b9, #65587c);
+}
+
+button{
+  background-color: transparent;
+  border: 0;
+  text-transform: uppercase;
+  font-weight: normal;
+  font-size: 10px;
+}
+
+/* html, body {
+  overflow: hidden;
+  height: 100%;
+  box-sizing: border-box;
+  margin: 0;
+}
+
+body {
+  overflow-y: scroll;
+  width: calc(100% + 20px);
+  padding: 8px;
+} */
+
+@media screen and (min-width: 270px) and (max-width:1024px) {
+  .body{
+    width: 100vw;
+    overflow: hidden;
+  }
+}

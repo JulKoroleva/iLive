@@ -1,0 +1,37 @@
+@import url(./__introduction/idea-article__introduction.css);
+@import url(./__paragraph/idea-article__paragraph.css);
+@import url(./__subtitle/idea-article__subtitle.css);
+@import url(./__tips/idea-article__tips.css);
+@import url(./__title/idea-article__title.css);
+@import url(./layers/layers.css);
+
+:root {
+    --scrollTop: 0;
+  }
+  
+  
+  .idea-article{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 70%;
+    color: aliceblue;
+    text-align: center;
+  }
+
+  .kamchatka__article{
+    background-color: #020704;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  @media screen and (min-width: 270px) and  (max-width:1024px){
+    .idea-article {
+      width: 90vw;
+      margin: 0;
+    
+    }
+   }

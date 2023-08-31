@@ -1,0 +1,55 @@
+.ideas__carousel-card_subtitle {
+    position: absolute;
+    z-index: 4;
+    left: 6%;
+    top: 50%;
+    width: 30%;
+    font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+    font-size: 20px;
+    letter-spacing: 0.2px;
+    word-spacing: 1.2px;
+    color: #4C4C4C;
+    font-weight: 400;
+    text-decoration: none;
+    font-style: normal;
+    font-variant: normal;
+    text-transform: none;
+    
+}
+
+
+@media screen and (min-width:1024px) and (max-width:1280px) {
+    .ideas__carousel-card_subtitle {
+        font-size: 17px;
+      
+    } 
+  
+   }
+  
+@media screen and (min-width:750px) and (max-width:1024px) {
+  
+    .ideas__carousel-card_subtitle {
+        font-size: 15px;
+  }
+  
+ }
+
+
+ 
+ @media screen and (min-width:480px) and (max-width:750px) {
+  
+    .ideas__carousel-card_subtitle {
+        font-size: 10px;
+        top: 50%;
+  }  
+  
+ }
+
+ @media screen and (min-width:270px) and (max-width:480px) {
+  
+    .ideas__carousel-card_subtitle {
+        font-size:6px;
+        top: 50%;
+  }
+ 
+ }

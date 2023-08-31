@@ -1,0 +1,136 @@
+
+
+.profile__info_quote {
+    align-self: flex-end;
+    padding: 0 0 0 40px;
+    margin: 0;
+    text-align: right;
+    width: 400px;
+    height: 80px;
+    font-size: 14px;
+    letter-spacing: 0px;
+    word-spacing: 3.4px;
+    color: #6d6d6d;
+    font-weight: normal;
+    text-decoration: none;
+    font-style: italic;
+    font-variant: small-caps;
+    text-transform: none;
+    overflow-wrap: break-word;
+   
+  }
+  
+  .profile__info_quote-input {
+    
+   
+    border: none;
+    outline: none;
+    padding: 0 0 0 47px;
+    text-align: right;
+    margin: 0;
+    height: 80px;
+    width: 400px;
+    border: none;
+    
+    font-size: 14px;
+    letter-spacing: 0px;
+    word-spacing: 3.4px;
+    color: #6d6d6d;
+    background-color: transparent;
+    font-weight: normal;
+    text-decoration: none;
+    font-style: normal;
+    font-variant: small-caps;
+    text-transform: none;
+    resize: none; /* Prevent resizing */
+    overflow-y: hidden;
+    overflow-x: hidden;
+    overflow-wrap: break-word; /* Hide any content that exceeds the specified height */
+  }
+
+
+  
+@media screen and (min-width:1024px) and (max-width:1280px) {
+ 
+ 
+  
+  
+  .profile__info_quote{
+    width: 90%;
+    height: 100%;
+    font-size: 14px;
+  }
+  .profile__info_quote-input{
+    width: 90%;
+    height: 100%;
+    font-size: 14px;
+  }
+
+ }
+
+@media screen and (min-width:750px) and (max-width:1024px) {
+ 
+ 
+  
+  
+  .profile__info_quote{
+    width: 90%;
+    height: 100%;
+    font-size: 12px;
+  }
+  .profile__info_quote-input{
+    width: 90%;
+    height: 100%;
+    font-size: 12px;
+  }
+
+ }
+
+
+@media screen and (min-width: 480px) and (max-width:750px) {
+ 
+  
+  .profile__info_quote{
+    width: 90%;
+    height: 100%;
+    font-size: 12px;
+  }
+  .profile__info_quote-input{
+    width: 90%;
+    height: 100%;
+    font-size: 12px;
+  }
+
+ }
+
+
+
+
+
+
+
+
+
+ @media screen and (min-width: 270px) and (max-width:480px) {
+
+
+.profile__info_quote{
+  width: 100%;
+  height: 80%;
+  font-size: 9px;
+  padding: 0 ;
+  
+}
+.profile__info_quote-input{
+  width: 100%;
+  height: 80%;
+  font-size: 9px;
+  padding: 0 ;
+}
+
+
+}
+
+
+
+

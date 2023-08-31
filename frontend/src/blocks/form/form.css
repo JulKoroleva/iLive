@@ -1,0 +1,40 @@
+@import url(./__button/form__button.css);
+@import url(./__container/form__containe.css);
+@import url(./__input/form__input.css);
+@import url(./__label/form__label.css);
+@import url(./shake/shake.css);
+
+@import url(./__element/form__element.css);
+@import url(./__review-photo/form__review-photo.css);
+@import url(./__subtitle/form__subtitle.css);
+@import url(./__title/form__title.css);
+
+
+
+.form {
+    display: flex;  
+    flex-direction: column;   
+    justify-content: center;
+    align-items: center;
+    margin-top: 100px ;
+   
+    }
+
+    .draggable-container {
+        cursor: grab;
+        overflow: hidden;
+        position: relative;
+      }
+      
+      .draggable-container:active {
+        cursor: grabbing;
+      }
+      
+      .draggable-image {
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
+
+    

@@ -1,0 +1,81 @@
+
+
+.home__carousel_item {
+    margin: auto auto;
+    opacity: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-content: center;
+    position: absolute;
+    top: 50%;
+    
+    height: 60%;
+    width: 100%;
+    transition: opacity 2s , transform 2s ;
+    transform: scale(1);
+  }
+  
+ 
+  .home__carousel_item.active {
+  width: 100%;
+  opacity: 1;
+  animation: expandAndDisappear 2s ease-out;
+  }
+
+  
+  .carousel_item.previous {
+    transform: scale(1);
+    opacity: 0;
+    
+  }
+
+
+  
+  @keyframes expandAndDisappear {
+    0% {
+        opacity: 0;
+        transform: scale(0.4);
+    }
+  
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+
+  @media screen and (min-width:750px) and (max-width:1024px) {  
+ 
+  .home__carousel_item {
+    top: 50%;
+    
+    height: 100%;
+    width: 100%;
+      }
+
+   }
+
+
+
+   @media screen and (min-width: 480px) and (max-width:750px) {
+
+      .home__carousel_item {
+        top: 60%;
+    
+        height: 60%;
+        width: 100%;
+      }
+
+}
+   
+   @media screen and (min-width: 270px) and (max-width:480px) {
+   
+      .home__carousel_item {
+        top: 55%;
+    
+        height: 60%;
+        width: 100%;
+      }
+
+}

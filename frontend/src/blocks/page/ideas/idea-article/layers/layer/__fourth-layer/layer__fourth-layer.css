@@ -1,0 +1,7 @@
+
+
+.layer__fourth-layer{
+    background-image: url(/src/images/articles/ideasArticles/kamchatka/fourth-layer.png);   
+     transform: translate3d(0, calc(var(--scrollTop) / 2), 0);  
+     z-index: 1;  
+   }

@@ -1,0 +1,57 @@
+
+
+.layer__header {
+    position: absolute;
+    z-index: 4;
+    top: 40%;
+    width: 50vw;
+    text-align: center;
+    transform: translate3d(0, calc(var(--scrollTop) / 7), 0);
+    transition: var(--transition);
+    will-change: transform;
+    text-transform: uppercase;
+    font-weight: 900;
+    color: var(--text);
+    color: rgb(255, 255, 255);
+    text-shadow: 0 0 5px #000000;
+    font-size: 50px;
+  }
+  
+
+  
+
+  @media screen and (min-width: 1024px) and  (max-width:1280px) {
+    .layer__header {   
+      font-size: 33px;
+      top: 35%;
+    }  
+   }
+   
+  @media screen and (min-width: 750px) and  (max-width:1024px) {
+    .layer__header {   
+      font-size: 30px;
+      top: 30%;
+    }  
+   }
+
+
+
+  @media screen and (min-width: 480px) and  (max-width:750px) {
+    .layer__header {   
+      font-size: 20px;
+      top: 30%;
+    
+    }  
+   }
+
+
+
+  @media screen and (min-width: 270px) and  (max-width:480px) {
+    .layer__header {   
+   font-size: 17px;
+   top: 25%;
+    }
+
+  
+   }
+ 

@@ -1,0 +1,155 @@
+@import url(./__text/calendar__text.css);
+@import url(./__title/calendar__title.css);
+
+.calendar-container {
+  
+  margin: auto;
+    display: grid;
+    grid-template-columns: repeat(53, 16px); /* 52 columns for weeks cells + 1 column for years sections */
+    grid-template-rows: repeat(91, 16px); /* 90 lines for years + 1 line for title */
+    gap: 5px; 
+  }
+  
+  
+  .calendar-cell {
+    width: 15px;
+    height: 15px;
+    border: 2px solid #acacac;
+    border-radius: 50%;
+  }
+  
+  .calendar-labels {
+    display: grid;
+    grid-template-rows: repeat(91, 20px); 
+    gap: 1px;
+    justify-content: start; 
+  }
+  
+  .calendar-label {
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px; 
+  }
+
+  
+  .calendar-cell-lived {
+    background-color: rgb(221, 84, 84); 
+    border: 2px solid #fcfcfc;
+  }
+  
+ 
+
+  .calendar-cell-five-year {
+    background-color: rgba(49, 139, 223, 0.836); 
+    border: 2px solid #030303; 
+  }
+
+
+  .hidden {
+    display: none;
+    opacity: 0;
+  }
+ 
+  @media screen and (min-width:1024px) and (max-width:1280px) {
+    .calendar-container {
+      grid-template-columns: repeat(53, 14px); 
+      grid-template-rows: repeat(91,14px);
+      
+      gap: 2px;
+     
+    }
+  
+    .calendar-cell{
+      width: 13px;
+      height: 13px;
+      border: 2px solid #acacac;
+    }
+    .calendar-cell-five-year{
+      background-color: rgba(49, 139, 223, 0.836);
+      border: 1px solid #030303; 
+    }
+    .calendar-cell-lived {
+      
+      border: 1px solid #ffffff; 
+    }
+    
+   }
+  
+@media screen and (min-width:750px) and (max-width:1024px) {
+  .calendar-container {
+    grid-template-columns: repeat(53, 9px); 
+    grid-template-rows: repeat(91, 9px);
+    
+    gap: 2px;
+   
+  }
+
+  .calendar-cell{
+    width: 6px;
+    height: 6px;
+    border: 1px solid #acacac;
+  }
+  .calendar-cell-five-year{
+    border: 1px solid #030303; 
+  }
+  .calendar-cell-lived {
+    
+    border: 1px solid #fcfcfc; 
+  }
+  
+ }
+
+
+ 
+ @media screen and (min-width:480px) and (max-width:750px) {
+  .calendar-container {
+    grid-template-columns: repeat(53, 7px); 
+    grid-template-rows: repeat(91, 7px);
+    
+    gap: 1px;
+   
+  }
+
+  .calendar-cell{
+    width: 4px;
+    height: 4px;
+    border: 0.5px solid #acacac;
+  }
+  .calendar-cell-five-year{
+    border: 0.5px solid #030303; 
+  }
+  
+  .calendar-cell-lived {
+    
+    border: 0.5px solid #fcfcfc; 
+  }
+ }
+
+ @media screen and (min-width:270px) and (max-width:480px) {
+  .calendar-container {
+    grid-template-columns: repeat(53, 5px); 
+    grid-template-rows: repeat(91, 5px);
+    max-width: 480px;
+    gap: 1px;
+   
+  }
+
+  .calendar-cell{
+    width: 2px;
+    height: 2px;
+    border: 0.5px solid #acacac;
+  }
+  .calendar-cell-five-year{
+    border: 0.5px solid #030303; 
+  }
+
+  .calendar-cell-lived {
+    
+    border: 0.5px solid #fcfcfc; 
+  }
+  
+ }
+
+  

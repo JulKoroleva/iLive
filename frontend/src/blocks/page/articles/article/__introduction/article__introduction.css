@@ -1,0 +1,11 @@
+@import url(./_title/article__introduction_title.css);
+@import url(./_subtitle/article__introduction_subtitle.css);
+@import url(./_text/article__introduction_text.css);
+
+
+.article__introduction {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 80%;
+}

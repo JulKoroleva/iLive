@@ -1,0 +1,19 @@
+@import url(./_home/sticky-header__button_home.css);
+@import url(./_logout/sticky-header__button_logout.css);
+
+.sticky-header__button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    border: none;
+    color: black;
+    text-decoration: none;
+  }
+  
+  .sticky-header__button:hover {
+    text-decoration-line: underline;
+    opacity: 0.5;
+    color: black;
+    text-decoration: none;
+  }

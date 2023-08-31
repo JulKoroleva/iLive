@@ -1,0 +1,22 @@
+.slide-up {
+    animation-name: slideUp;
+  }
+
+  
+  @keyframes slideUp {
+    0% {
+        transform: translateY(0) scale(1) ;;
+        opacity: 1;
+        scale:(1) 
+      }
+      60% {
+          transform: scale(0.3) translate(0px, -50px);
+          opacity: 0;
+          
+        }
+      100% {
+        transform: scale(0.3) translate(0px, -50px);
+        opacity: 0;
+        
+      }
+     }

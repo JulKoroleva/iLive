@@ -1,0 +1,64 @@
+@import url(./__avatar/element__avatar.css);
+@import url(./__button/element__button.css);
+@import url(./__description/element__description.css);
+@import url(./__image/element__image.css);
+@import url(./__likes/element__likes.css);
+@import url(./__title/element__title.css);
+@import url(./__info/_container/element__info_container.css);
+
+ .element {
+    margin-bottom: 95px;
+    max-width: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    background-color: transparent;
+    max-height: 630px;
+  }
+ 
+
+  
+
+@media screen and (min-width: 1024px) and (max-width:1280px) {
+
+
+  .element {
+  width: 100%;
+  }
+
+ }
+ 
+ @media screen and (min-width: 750px) and (max-width:1024px) {
+
+
+  .element {
+    width: 100%;
+    max-width: 90%;
+    margin-right: 0;
+  }
+
+ }
+
+ 
+ @media screen and (min-width: 480px) and (max-width:750px) {
+
+
+  .element {
+width: 100%;
+
+  }
+
+
+ }
+
+ 
+ @media screen and (min-width: 270px) and (max-width:480px) {
+    
+ 
+  .element {
+width: 100%;
+
+  }
+
+
+ }

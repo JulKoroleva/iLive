@@ -1,0 +1,60 @@
+@import url(./_constainer/form__review-photo_constainer.css);
+
+.form__review-photo {
+    max-width: 400px;
+    max-height: 300px;
+    object-fit: contain;
+    margin-top: 20px;
+  }
+
+  .form__review-photo {
+    animation: fadeIn 0.5s ease-in-out; 
+  }
+     
+  
+  
+  
+  
+  
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+
+   
+   @media screen and (min-width: 480px) and (max-width:750px) {
+      
+  
+    
+  
+    .form__review-photo {
+      height: 100%;
+      width: 480px;
+    }
+  
+  
+  
+   }
+  
+   
+   @media screen and (min-width: 270px) and (max-width:480px) {
+      
+    
+  
+    .form__review-photo {
+    height: 70%;
+    width: 60vw;
+
+    }
+  
+    
+  
+   }

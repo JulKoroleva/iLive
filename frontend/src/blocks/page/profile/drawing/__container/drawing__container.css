@@ -1,0 +1,63 @@
+
+
+.drawing__container{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+  }
+  
+
+
+
+@media screen and (min-width:750px) and (max-width:1024px) {
+ 
+ 
+
+  .drawing__container{
+    width: 95vw;
+    max-width: 700px;
+  }
+
+ 
+ }
+
+
+@media screen and (min-width: 480px) and (max-width:750px) {
+  
+  .drawing__container{
+    display: flex;
+    width: 90vw;
+    max-width: 700px;
+    min-width: 480px
+  }
+
+  
+
+
+ }
+
+
+
+
+
+
+
+
+
+ @media screen and (min-width: 270px) and (max-width:480px) {
+ 
+
+  .drawing__container{
+    width: 95vw;
+    max-width: 480px;
+  }
+
+
+}
+
+
+
+

@@ -1,0 +1,164 @@
+import React, { useState, useRef, useContext  } from 'react';
+import { NavLink, useNavigate } from 'react-router-dom';
+
+import { TranslationContext } from '../context/TranslationContext';
+
+import LanguageButton from './LanguageButton';
+import UpperHeader from './UpperHeader';
+import Form from './Form';
+import envelope from '../images/reg-log/envelope.png';
+import padlock from '../images/reg-log/padlock.png';
+
+function Registration(props) {
+
+  const translation = useContext(TranslationContext);
+
+  const [emailShake, setEmailShake] = useState(false);
+  const [passwordShake, setPasswordShake] = useState(false);
+  const [passwordLengthError, setPasswordLengthError] = useState(false); 
+
+  const emailImageRef = useRef(null);
+  const passwordImageRef = useRef(null);
+
+  const initialData = {
+    email: '',
+    password: '',
+  };
+
+  const [data, setData] = React.useState(initialData);
+  const navigate = useNavigate();
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setData((data) => ({
+      ...data,
+      [name]: value,
+    }));
+
+    if (name === 'email') {
+      setEmailShake(false);
+      emailImageRef.current.classList.remove('shake');
+    }
+    if (name === 'password') {
+      setPasswordShake(false);
+      passwordImageRef.current.classList.remove('shake');
+      setPasswordLengthError(false);
+    }
+  };
+
+  const resetForm = () => {
+    setData(initialData);
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    if (!data.password || !data.email) {
+      if (!data.email) {
+        setEmailShake(true);
+        emailImageRef.current.classList.add('shake');
+        emailImageRef.current.parentElement.classList.add('shake-border');
+      } else {
+        setEmailShake(false);
+        emailImageRef.current.parentElement.classList.remove('shake-border');
+      }
+
+      if (!data.password) {
+        setPasswordShake(true);
+        passwordImageRef.current.classList.add('shake');
+        passwordImageRef.current.parentElement.classList.add('shake-border');
+      } else {
+        setPasswordShake(false);
+        passwordImageRef.current.parentElement.classList.remove('shake-border');
+      }
+      return;
+    }
+
+    // Check password length
+    if (data.password.length < 8) {
+      setPasswordShake(true);
+      passwordImageRef.current.classList.add('shake');
+      passwordImageRef.current.parentElement.classList.add('shake-border');
+      setPasswordLengthError(true);
+      return;
+    }
+
+    setEmailShake(false);
+    setPasswordShake(false);
+    emailImageRef.current.classList.remove('shake');
+    emailImageRef.current.parentElement.classList.remove('shake-border');
+    passwordImageRef.current.classList.remove('shake');
+    passwordImageRef.current.parentElement.classList.remove('shake-border');
+
+    props.onRegister(data.email, data.password);
+    resetForm();
+  };
+
+  return (
+    <>
+      <section className='page'>
+        <UpperHeader>
+          <nav style={{width:'100%', display:'flex', flexDirection:'row', justifyContent:'space-between', alignItems:'center'}}>
+          <LanguageButton />
+          <NavLink to='/' className='upper-header__button_reglog_home'>
+            {translation.upperHeader.homePage}
+          </NavLink>
+          </nav>
+          
+        </UpperHeader>
+
+        <Form submit={translation.signup.submitButton} onSubmit={handleSubmit} title={translation.signup.title}>
+          <label className={`form__label ${emailShake ? 'shake-border' : ''}`}>
+            <div className='form__label_img'>
+              <img
+                src={envelope}
+                ref={emailImageRef}
+                style={{ width: '30px', height: '30px', objectFit: 'contain' }}
+                alt='Email'
+              />
+            </div>
+            <input
+              value={data.email}
+              onChange={handleChange}
+              className={`form__input form__input_email ${emailShake ? 'shake-input' : ''}`}
+              type='text'
+              name='email'
+              minLength='2'
+              maxLength='40'
+              placeholder='email'
+              autoComplete='off'
+              required
+            />
+          </label>
+          <label className={`form__label ${passwordShake || passwordLengthError ? 'shake-border' : ''}`} style={{ marginBottom: '50px' }}>
+            <div className='form__label_img'>
+              <img
+                src={padlock}
+                ref={passwordImageRef}
+                style={{ width: '30px', height: '30px', objectFit: 'contain' }}
+                alt='Password'
+              />
+            </div>
+            <input
+              value={data.password}
+              onChange={handleChange}
+              className={`form__input form__input_password ${passwordShake ? 'shake-input' : ''}`}
+              type='password'
+              name='password'
+              minLength='8'
+              maxLength='400'
+              placeholder='password'
+              autoComplete='off'
+              required
+            />
+          </label>
+          {!props.errMessage && passwordLengthError && <p className='error-message'>{translation.signup.passwordLengthError}</p>}
+          {props.errMessage && <p className='error-message'>{props.errMessage}</p>}
+        </Form>
+        <NavLink to='/login' style={{ marginTop: '40px' }} className='login__button'>{translation.signup.registered}</NavLink>
+      </section>
+    </>
+  );
+}
+
+export default Registration;

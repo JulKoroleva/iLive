@@ -1,0 +1,25 @@
+.modal__close-btn {
+    position: absolute;
+    width: 30px; 
+    height:  30px; 
+    right: -30px;
+    top: -30px;
+    z-index: 126;
+    background-image: url('/src/images/close_button.svg');
+    background-size: cover;
+  }
+
+  @media screen and (min-width: 270px) and (max-width:480px) {
+      
+  
+  
+    .modal__close-btn{
+      width: 20px; 
+      height:  20px; 
+      right: 12px;
+      top: 12px;
+      background-image: url('/src/images/close_button_mobile.svg');
+    }
+  
+  
+   }

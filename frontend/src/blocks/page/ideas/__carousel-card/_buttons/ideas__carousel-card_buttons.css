@@ -1,0 +1,65 @@
+@import url(./slide-animation/slide-animation.css);
+
+
+.ideas__carousel-card_buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 1100px;
+    margin-top: 20px;
+}
+
+.ideas__carousel-card_button {
+  width: 40px;
+  height: 40px;
+}
+
+
+
+@media screen and (min-width:1024px) and (max-width:1280px) {
+    
+    .ideas__carousel-card__buttons{
+      width: 75vw;
+      font-size: 10px;
+      justify-content: space-around;
+    }
+  
+   }
+  
+@media screen and (min-width:750px) and (max-width:1024px) {
+ 
+  .ideas__carousel-card_buttons{
+    width: 75vw;
+    font-size: 10px;
+  }  
+ }
+
+
+ 
+ @media screen and (min-width:480px) and (max-width:750px) {
+  
+ 
+  .ideas__carousel-card_buttons{
+    width: 75vw;
+    font-size: 10px;
+  }
+ 
+  
+  
+ }
+
+ @media screen and (min-width:270px) and (max-width:480px) {
+  
+ 
+  .ideas__carousel-card_buttons{
+    width: 75vw;
+    font-size: 10px;
+  }
+
+  .ideas__carousel-card_button {
+    width: 20px;
+    height: 20px;
+  }
+
+  
+ }

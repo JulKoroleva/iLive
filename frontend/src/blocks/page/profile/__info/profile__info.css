@@ -1,0 +1,77 @@
+@import url(./_age/profile__info_age.css);
+
+@import url(./_name/profile__info_name.css);
+
+@import url(./_quote/profile__info_quote.css);
+
+
+.profile__info{
+    display: flex;
+    align-items: flex-start; /* To align items to the left */
+    justify-content: flex-start; /* To align items to the top */
+    flex-direction: column;
+    
+    margin:   0 20px 0 50px;
+    width: 500px;
+    height: 100%;
+  }
+  
+
+  
+@media screen and (min-width:1024px) and (max-width:1280px) {
+
+  .profile__info{
+    height: 100%;
+    width: 398px;
+    margin-left: 10px;
+  }  
+
+   }
+
+  
+  @media screen and (min-width:750px) and (max-width:1024px) {
+  
+    .profile__info{
+      height: 100%;
+      width: 60%;
+      margin-left: 10px;
+    }
+ 
+  
+   }
+  
+  
+  @media screen and (min-width: 480px) and (max-width:750px) {
+  
+    .profile__info{
+      height: 100%;
+      width: 60%;
+      margin-left: 10px;
+    }
+    
+ 
+  
+   }
+  
+  
+  
+  
+  
+  
+  
+  
+  
+   @media screen and (min-width: 270px) and (max-width:480px) {
+
+  .profile__info{
+    height: 100%;
+    width: 60%;
+    min-width: 160px;
+    margin-left: 10px;
+  }
+  
+  
+  }
+  
+  
+  

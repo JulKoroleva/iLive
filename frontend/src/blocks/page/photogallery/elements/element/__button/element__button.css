@@ -1,0 +1,67 @@
+
+
+
+.element__delete-button{
+    position: absolute; 
+    top: 20px; 
+    right: 20px; 
+    border: none; 
+    background-color: transparent; 
+    height: 18px; 
+    width: 19.3px; 
+    transition: .2s; 
+    outline: none; 
+    object-fit: contain; 
+    
+    } 
+    
+    .element__delete-button:hover { 
+    opacity: 0.6; 
+    cursor: pointer 
+    }
+    
+    
+  
+  .element__delete-button_disabled { 
+  
+    display: none; 
+  
+  } 
+
+  
+  .element__like-button { 
+    background-color: transparent;
+    margin-right: 21px;
+    border: none; 
+    height: 19px; 
+    width: 22px;
+    
+    transition: .2s; 
+    outline: none; 
+    background-image: url(/src/images/like__button.svg);
+    background-repeat: no-repeat;
+  background-size: contain;
+  
+  } 
+  
+  .element__like-button:hover { 
+  opacity: 0.5; 
+  cursor: pointer 
+  } 
+  
+  .element__like-button_active{
+    background-color: transparent;
+    margin-right: 21px;
+    border: none; 
+    height: 18.13px; 
+    height: 19px; 
+    width: 22px;
+    transition: .2s; 
+    outline: none; 
+    background-image: url(/src/images/like__button_active.svg);
+  
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+  
+ 

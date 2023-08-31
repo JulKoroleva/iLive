@@ -1,0 +1,65 @@
+@import url(./__container/article__container.css);
+@import url(./__button/article__button.css);
+@import url(./column-layout/column-layout.css);
+@import url(./grid-layout/grid-layout.css);
+@import url(./article/article.css);
+
+.articles {
+  width: 90%;
+}
+
+
+.page__article_info-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  height: 90px;
+  width: 90%;
+}
+
+
+.page__article_info-container.loading{
+  opacity: 0;
+}
+
+.toggle-layout__button{
+  width: 40px;
+  height: 40px;
+}
+
+
+.empty__title{
+  position: fixed;
+  top: 20%;
+  left: 50%;
+}
+
+@media screen and (min-width: 1024px) and (max-width: 1280px) { 
+  .page__article_info-container {
+    width: 90%;
+  } 
+}
+
+@media screen and (min-width: 750px) and (max-width: 1024px) {  
+  .page__article_info-container {
+    margin-top: 20px;
+    width: 80%;
+  }  
+}
+
+@media screen and (min-width: 480px) and (max-width: 750px) { 
+  .page__article_info-container {
+    margin-top: 20px;
+    width: 80%;
+    font-size: 12px;
+  } 
+}
+
+@media screen and (min-width: 270px) and (max-width: 480px) {
+  .page__article_info-container {
+    width: 80vw;
+    margin-top: 20px;
+    font-size: 10px;
+  } 
+}

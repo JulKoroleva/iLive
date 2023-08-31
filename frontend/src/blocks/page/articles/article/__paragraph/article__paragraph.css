@@ -1,0 +1,10 @@
+@import url(./_text/article__paragraph_text.css);
+@import url(./_title/article__paragraph_title.css);
+@import url(./_tip/article__paragraph_tip.css);
+
+.article__paragraph {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 80%;
+}

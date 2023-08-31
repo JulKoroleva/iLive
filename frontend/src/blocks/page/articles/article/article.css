@@ -1,0 +1,15 @@
+@import url(./__title/article__title.css);
+@import url(./__subtitle/article__subtitle.css);
+@import url(./__like-button/article__like-button.css);
+@import url(./__container/article__container.css);
+@import url(./__introduction/article__introduction.css);
+@import url(./__paragraph/article__paragraph.css);
+@import url(./__conclusion/article__conclusion.css);
+
+.article {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align:center
+}

@@ -1,0 +1,17 @@
+
+@import url(./_button/toggle-layout__button_flex.css);
+
+.column-layout {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  /* Styles for three-column layout */
+  .column-layout .articles {
+    width: calc(33.33% - 20px);
+    margin-right: 20px;
+    margin-bottom: 20px;
+  }
+
+  

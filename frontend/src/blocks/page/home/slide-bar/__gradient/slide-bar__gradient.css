@@ -1,0 +1,52 @@
+
+.slide-bar__gradient {
+    position: absolute;
+    overflow: hidden;
+    top: 80px;
+    opacity: 0.5;
+    z-index: 3;
+
+}
+
+
+@media screen and (min-width: 1024px) and  (max-width:1280px){
+   
+    .slide-bar__gradient {
+        width: 100wv;
+        max-height: 480px;
+        top: 50px;
+    }
+   
+   }
+
+   
+
+
+@media screen and (min-width:750px) and (max-width:1024px) {
+   
+    .slide-bar__gradient{    
+    width: 100wv;
+    max-height: 480px;
+    top: 20px;
+    }
+   }
+
+@media screen and (min-width:480px) and (max-width:750px) {
+
+    .slide-bar__gradient{    
+    width: 100wv;
+    max-height: 380px;
+    top: 20px;
+    }
+   }
+
+   @media screen and (min-width:270px) and (max-width:480px) {
+        
+    .slide-bar__gradient{    
+        width: 100wv;
+        max-height: 380px;
+        top: -40px;
+        }
+}
+
+

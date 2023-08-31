@@ -1,0 +1,9 @@
+
+
+.photo-popup__close-button{
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    top: -45px;
+    right: -45px;
+  }

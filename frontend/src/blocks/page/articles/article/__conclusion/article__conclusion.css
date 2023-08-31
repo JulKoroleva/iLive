@@ -1,0 +1,14 @@
+.article__conclusion{
+    margin-top: 30px;
+    width: 80%;
+    font-family: "Times New Roman", Times, serif;
+    font-size: 25px;
+    letter-spacing: -0.2px;
+    word-spacing: 0px;
+    color: #4F4F4F;
+    font-weight: 400;
+    text-decoration: none solid rgb(86, 86, 86);
+    font-style: normal;
+
+    text-transform: none;
+}

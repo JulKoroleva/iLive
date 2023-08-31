@@ -1,0 +1,23 @@
+.ideas__carousel-card_link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+position: absolute;
+max-height: 100px;
+max-height: 25px;
+padding: 10px;
+bottom: 20px;
+right:  30px;
+background-color: rgb(255, 255, 255);
+border-radius: 30px;
+font-family: Georgia, serif;
+font-size: 10px;
+text-transform: uppercase;
+text-decoration: none;
+color: black;
+}
+
+.ideas__carousel-card_link:hover {
+    opacity: 0.5;
+    cursor: pointer;
+}

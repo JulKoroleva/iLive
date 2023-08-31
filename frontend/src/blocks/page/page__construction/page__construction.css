@@ -1,0 +1,21 @@
+@import url(./_gear/page__construction_gear.css);
+@import url(./_image/page__construction_image.css);
+@import url(./_title/page__construction_title.css);
+
+.page__construction{
+    display: flex;
+    position: relative;
+    width: 500px;
+    height: 420px;
+    margin-top: 50px;
+}
+
+
+@media screen and (min-width: 270px) and  (max-width:750px){
+    .page__construction{
+        width: 80vw;
+        height: 50vw;
+        margin-top: 30%;
+    }
+    
+   }

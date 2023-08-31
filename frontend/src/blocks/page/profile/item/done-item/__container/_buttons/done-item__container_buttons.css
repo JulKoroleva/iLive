@@ -1,0 +1,22 @@
+
+.done-item__container_buttons {
+    grid-area: 1 / 2 / 2 / 3;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;    
+    margin-left: 20px;
+  }
+  
+  .done-item-button{
+    background-color: white ;
+    box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.2);
+    margin: 15px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;   
+  }
+  

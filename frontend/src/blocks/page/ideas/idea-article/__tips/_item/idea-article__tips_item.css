@@ -1,0 +1,11 @@
+
+
+.idea-article__tips_item{
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    ;
+    margin-bottom: 10px;
+    text-align: start;
+  }

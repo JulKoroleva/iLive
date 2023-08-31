@@ -1,0 +1,48 @@
+version: '3'
+
+networks:
+  ilive-network:
+
+services:
+
+ mongodb-container:
+  container_name: mongodb-container
+  build:
+   context: ./mongodb
+   dockerfile: Dockerfile 
+  image: my-mongo:latest
+  ports:
+    - "27018:27017"
+  networks:
+    - ilive-network
+  restart: always
+
+ my-ilive-backend:
+  container_name: my-ilive-backend
+  build:
+   context: ./backend
+   dockerfile: Dockerfile
+  image: my-ilive-backend:latest
+  volumes:
+   - ./backend/images_from_container:/app/images
+  ports:
+    - "4000:4000"
+  networks:
+    - ilive-network
+  depends_on:
+    - mongodb-container
+  restart: always
+    
+ my-ilive-frontend:
+  container_name: my-ilive-frontend
+  build:
+   context: ./frontend
+   dockerfile: Dockerfile 
+  image: my-ilive-frontend:latest
+  ports:
+    - "3000:3000"
+  networks:
+    - ilive-network
+  depends_on:
+    - my-ilive-backend
+  restart: always

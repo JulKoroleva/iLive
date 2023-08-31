@@ -1,0 +1,21 @@
+.page__sticky-header{
+    display: flex;
+    flex-direction: column ;
+    justify-content: center;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 80;
+    background-color: #ffffff; 
+    width: 111%;
+  }
+  
+@media screen and (min-width: 270px) and  (max-width:1024px){
+
+    .page__sticky-header{
+      width: 100vw;
+      margin: 0;
+     
+    }
+  
+   }

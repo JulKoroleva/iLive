@@ -1,0 +1,126 @@
+@import url(./_buttons/done-item__container_buttons.css);
+@import url(./_data/done-item__container_data.css);
+
+  
+.done-item__container{
+    width: 850px;
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    grid-template-rows: 1fr;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    justify-items: center;
+    align-items: center;
+    margin: 30px 0 ;
+    opacity: 0.5;
+    
+  
+  }  
+
+  .done-item__container_data{
+    overflow: hidden;
+  }
+
+  
+@media screen and (min-width:1024px) and (max-width:1280px) {
+
+ 
+ .done-item__container{
+  display: flex;
+    margin-left: 75px;
+    width: 90%;
+  }
+ 
+  .done-item__container_data{
+    margin: 0 0 0 40px;
+    width: 45vw;
+  }
+ 
+ }
+
+  
+@media screen and (min-width:750px) and (max-width:1024px) {
+ 
+  .done-item__container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 100%;
+  }
+ .done-item__container_data{
+    margin: 0;
+    width: 100%;
+    max-width: 550px;
+  }
+  .done-item__container_buttons{
+    z-index: 433;
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+  }
+
+
+
+ }
+
+
+@media screen and (min-width: 480px) and (max-width:750px) {
+
+ .done-item__container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 100%;
+  }
+.done-item__container_data{
+    
+    margin: 0;
+    width: 100%;
+    max-width: 550px;
+  }
+   .done-item__container_buttons{
+    z-index: 433;
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+  }
+
+  
+ }
+
+
+
+
+
+
+
+
+
+ @media screen and (min-width: 270px) and (max-width:480px) {
+ 
+ .done-item__container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 100%;
+  }
+  .done-item__container_data{
+    margin: 0;
+    width: 100%;
+    max-width: 550px;
+  }
+.done-item__container_buttons{
+    z-index: 433;
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+  }
+
+ 
+
+}
+

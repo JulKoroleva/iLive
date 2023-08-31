@@ -1,0 +1,110 @@
+
+.modal-card__container {
+  position: relative;
+}
+
+.modal-card__container_content{    
+  
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around; 
+    align-items: center; 
+    position: fixed; 
+    top: 50%; 
+    left: 50%; 
+    transform: translate(-50%, -50%); 
+    width: 1000px;
+    height: 550px;
+    background: linear-gradient(119.05deg, #86acbe 0%, #eeeeee 100%);
+    box-shadow: 0px 0px 53px -4px rgba(0, 0, 0, 0.2);
+    border-radius: 50px;
+    z-index: 125;
+  }
+
+  .modal-card__container_content_delete{    
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    align-items: center; 
+    text-align: center;
+    position: fixed; 
+    top: 50%; 
+    left: 50%; 
+    transform: translate(-50%, -50%); 
+    width: 500px;
+    height: 250px;
+    background: linear-gradient(119.05deg, #86acbe 0%, #eeeeee 100%);
+    box-shadow: 0px 0px 53px -4px rgba(0, 0, 0, 0.2);
+    border-radius: 30px;
+    z-index: 125;
+  }
+
+@media screen and (min-width:750px) and (max-width:1024px) {
+ 
+  
+
+  .modal-card__container_content{
+    width: 90vw;
+    height: 49vw;
+  }
+
+  
+  .modal-card__container_content_delete{
+    width: 66vw;
+    height: 32vw;
+    border-radius: 20px;
+  }
+
+
+ }
+
+
+@media screen and (min-width: 480px) and (max-width:750px) {
+ 
+
+  .modal-card__container_content{
+    width: 90vw;
+    height: 49vw;
+    border-radius: 20px;
+  }
+
+ 
+  .modal-card__container_content_delete{
+    max-width: 500px;
+    max-height: 250px;
+    border-radius: 25px;
+  }
+
+
+ }
+
+
+
+
+
+
+
+
+
+ @media screen and (min-width: 270px) and (max-width:480px) {
+
+  .modal-card__container_content{
+    width: 90vw;
+    height: 48vw;
+    border-radius: 15px;
+  }
+
+  .modal-card__container_content_delete{
+    
+    width: 90vw;
+    height: 65vw;
+    border-radius: 15px;
+  }
+
+ 
+
+}
+
+
+
+

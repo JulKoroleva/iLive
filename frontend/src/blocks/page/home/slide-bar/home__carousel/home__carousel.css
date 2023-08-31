@@ -1,0 +1,83 @@
+@import url(./_buttons/home__carousel_buttons.css);
+@import url(./_item/home__carousel_item.css);
+@import url(./_image/home__carousel_image.css);
+@import url(./_text/home__carousel_text.css);
+
+
+.home__carousel{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    width: 90%; 
+    margin: 0;
+    height: 330px;
+    bottom: 0;
+    z-index: 7;
+} 
+
+  
+  .slice {
+    width: 1000px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+ 
+
+  @media screen and (min-width:750px) and (max-width:1024px) {  
+ 
+    .home__carousel {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      width: 90vw;
+      font-size: 10px;
+      max-height: 100px;
+    }
+
+   }
+
+   @media screen and (min-width:750px) and (max-width:1024px) {  
+ 
+    .home__carousel {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      width: 80vw;
+      font-size: 10px;
+      max-height: 200px;
+    }   
+  
+     }
+
+   @media screen and (min-width: 480px) and (max-width:750px) {
+    .home__carousel {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      width: 80vw;
+      font-size: 10px;
+      max-height: 250px;
+    }   
+}
+
+   
+   @media screen and (min-width: 270px) and (max-width:480px) {
+    .home__carousel {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      width: 90vw;
+      font-size: 10px;
+      max-height: 180px;
+    }
+  
+}
