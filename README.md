@@ -29,10 +29,12 @@ Here's a detailed guide to the various sections and features of the iLive websit
 -   [Browser Compatibility](#browser-compatibility)
 
 ## Introduction
-Welcome to iLive, a platform born out of inspiration and a deep belief in the transformative power of self-improvement. In this section, I'd like to share what motivated me to create this project and why I consider it an essential endeavor.
 
+<div align="center"> 
+    
+ Welcome to iLive, a platform born out of inspiration and a deep belief in the transformative power of self-improvement. In this section, I'd like to share what motivated me to create this project and why I consider it an essential endeavor.
+ 
 Life is fleeting, a brief and delicate moment in the grand tapestry of the universe. The world we inhabit is vast, teeming with diversity and wonder. It's a place where countless remarkable things unfold every day. Yet, amid the hustle and bustle of existence, many people find themselves caught in the current, oblivious to the beauty and depth of life.
-
 Our time on this Earth is limited, like a single grain of sand in the expanse of a desert. We're born, we grow, we learn, we love, and we face challenges. Then, one day, our journey concludes. The realization of life's brevity should serve as a powerful motivation to make the most of every moment.
 
 The world is an awe-inspiring place. It's a mosaic of cultures, landscapes, and experiences. From the bustling streets of urban metropolises to the serene solitude of remote natural wonders, the world offers an array of experiences waiting to be embraced.
@@ -43,8 +45,7 @@ At iLive, we believe in the power of self-awareness and personal growth. We enco
 
 As you embark on your journey within iLive, remember that life is indeed short, but its possibilities are limitless. By engaging with the ideas, articles, and experiences on this platform, you can take meaningful steps towards a more enriching and purposeful existence.
 
-Let's navigate this vast and wondrous world together, pausing to revel in its beauty, learn from its diversity, and find inspiration in the most unexpected places. Welcome to iLive, where we celebrate the incredible journey of life and the boundless potential it holds. 
-iLive is a platform dedicated to enhancing the lives of its users. With a focus on providing ideas and inspiration, the website offers a range of content and interactive features. 
+</div>
 
 <h2 style="text-decoration: none">Pages</h2>  
 <a name="pages"></a> 
