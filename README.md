@@ -14,13 +14,19 @@ Here's a detailed guide to the various sections and features of the iLive websit
     -   [Tests](#tests)
     -   [Ideas](#ideas)
     -   [Photogallery](#photo-gallery)
-    -   [User Profile](#user-profile)
-	     -  [Ideas list](#user-ideas)
-        -   [Sketchpad](#user-sketchpad)
-        -   [Calendar](#user-calendar)
--  [Future Plans](#future-plans)
-- [Getting Started](#getting-started)
-- [Browser Compatibility](#browser-compatibility)
+    -   <details>
+        <summary><a href="#user-profile">User Profile</a></summary>
+        <p>
+
+        - [Ideas list](#user-ideas)
+        - [Sketchpad](#user-sketchpad)
+        - [Calendar](#user-calendar)
+
+        </p>
+        </details>
+-   [Future Plans](#future-plans)
+-   [Getting Started](#getting-started)
+-   [Browser Compatibility](#browser-compatibility)
 
 ## Introduction
 Welcome to iLive, a platform born out of inspiration and a deep belief in the transformative power of self-improvement. In this section, I'd like to share what motivated me to create this project and why I consider it an essential endeavor.
@@ -196,3 +202,19 @@ Open your web browser and navigate to `http://localhost:3000`. You should see th
 <a name="browser-compatibility"></a>
 
 iLive is designed to work across a wide range of modern web browsers. It dynamically adapts its language to match your browser's settings, making it accessible and user-friendly. There are currently two languages available for selection.
+
+<script>
+  var details = document.querySelectorAll('details');
+
+  details.forEach(function(detail) {
+    detail.addEventListener('click', function() {
+      // Закрывать все другие разделы, кроме активного
+      details.forEach(function(otherDetail) {
+        if (otherDetail !== detail) {
+          otherDetail.removeAttribute('open');
+        }
+      });
+    });
+  });
+</script>
+
