@@ -203,18 +203,5 @@ Open your web browser and navigate to `http://localhost:3000`. You should see th
 
 iLive is designed to work across a wide range of modern web browsers. It dynamically adapts its language to match your browser's settings, making it accessible and user-friendly. There are currently two languages available for selection.
 
-<script>
-  var details = document.querySelectorAll('details');
 
-  details.forEach(function(detail) {
-    detail.addEventListener('click', function() {
-      // Закрывать все другие разделы, кроме активного
-      details.forEach(function(otherDetail) {
-        if (otherDetail !== detail) {
-          otherDetail.removeAttribute('open');
-        }
-      });
-    });
-  });
-</script>
 
