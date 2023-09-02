@@ -59,7 +59,7 @@ const Photogallery = (props) => {
       const parts = json.avatar.split("/"); // Split the string on the backslash character
       const avatarName = parts[parts.length - 1];
       setUserAvatar({
-        avatar: json.avatar,
+        avatar: avatarName,
       });
       setUserInfo({
         _id: json._id
