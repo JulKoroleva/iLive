@@ -5,7 +5,7 @@
     max-width: 450px;
     position: relative;
     height: 50%;
-    max-height: 120px;
+    max-height: 80px;
     overflow-y: scroll;
     z-index: 0; /* Set a lower z-index for the description, so it goes behind the title */
     word-wrap: break-word;
@@ -34,7 +34,8 @@
     .photo-popup__description {
       margin-top: 70px;
       font-size: 14px;
-      height: 90px;
+      height: 100%;
+      max-height: 90px;
     }
   
   
@@ -50,7 +51,8 @@
     .photo-popup__description {
         margin-top: 50px;
         font-size: 14px;
-        height: 100px;
+        height: 100%;
+        max-height: 100px;
     }
   
   
@@ -66,7 +68,8 @@
       margin-top: 60px;
       margin-bottom: 10px;
     font-size: 10px;
-    height: 130px;
+    height: 100%;
+    max-height: 130px;
     width: 80vw;
     }
   
