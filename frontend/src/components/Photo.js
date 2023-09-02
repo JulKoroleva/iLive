@@ -18,7 +18,7 @@ function Photo(props) {
     <div className='element'>
       <div className='element__info_container'>
         <LazyLoadImage src={`${constants.baseURL}/${props.photo.path}`} alt='photo' className='element__image' effect='blur' onClick={() => props.openPhoto(props.photo)} />
-        {props.photo.user === props.userInfo.id ? (
+        {props.photo.user === props.userInfo._id ? (
           <button onClick={() => { props.handlePhotoDelete(props.photo) }} className='element__delete-button' type='button'>
             <img src={trash} alt='Удалить' />
           </button>
@@ -32,7 +32,7 @@ function Photo(props) {
           <h3 className='element__title'>{props.photo.title}</h3>
           <div className='element__likes'>
             <p className='element__number-of-likes'>{props.photo.likes.length}</p>
-            {props.photo.likes.includes(props.userInfo.id) ? (
+            {props.photo.likes.includes(props.userInfo._id) ? (
               <button type='button' onClick={() => { props.handlePhotoLike(props.photo) }} className='element__like-button element__like-button_active'></button>
             ) : (
               <button type='button' onClick={() => { props.handlePhotoLike(props.photo) }} className='element__like-button'></button>

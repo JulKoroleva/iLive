@@ -374,9 +374,9 @@ const Photogallery = (props) => {
         setPhotogallery((prevPhotogallery) => {
           const updatedPhotogallery = prevPhotogallery.map((item) => {
             if (item._id === photo._id) {
-              const updatedLikes = photo.likes.includes(userInfo.id)
-                ? photo.likes.filter((id) => id !== userInfo.id)
-                : [...photo.likes, userInfo.id];
+              const updatedLikes = photo.likes.includes(userInfo._id)
+                ? photo.likes.filter((id) => id !== userInfo._id)
+                : [...photo.likes, userInfo._id];
               return { ...item, likes: updatedLikes };
             }
             return item;
@@ -391,10 +391,10 @@ const Photogallery = (props) => {
 
   //Delete photo
   function handlePhotoDelete(photo) {
-    const photoIsMine = photo.user === userInfo.id;
+    const photoIsMine = photo.user === userInfo._id;
     console.log('handlePhotoDelete userInfo ', userInfo);
     console.log('photo.user.id ', photo.user);
-    console.log('userInfo.id ', userInfo.id);
+    console.log('userInfo ', userInfo);
     console.log('photoIsMine', photoIsMine);
     if (photoIsMine) {
       const jwt = auth.getJwtFromLS();
