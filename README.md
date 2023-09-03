@@ -50,6 +50,8 @@ As you embark on your journey within iLive, remember that life is indeed short, 
 <h2 style="text-decoration: none">Pages</h2>  
 <a name="pages"></a> 
 <div align="center">  
+    
+   ![pages](https://i.postimg.cc/LswfRVrr/image.png)
 <p>Below you can learn more about the main sections of the site.</p> 
 </div>
 
@@ -58,10 +60,14 @@ As you embark on your journey within iLive, remember that life is indeed short, 
 
 The iLive homepage welcomes users and provides insight into the site's purpose. It serves as an entry point to the platform, introducing visitors to the concept and idea of the project, and also describes a brief navigation through the site.
 
+![homepage](https://i.postimg.cc/L6DDm9qM/homepage.png)
+
 ### Articles
 <a name="articles"></a>
 
 The articles page hosts a collection of articles covering various topics. The articles section covers a wide range of topics and includes valuable advice and insights. These articles are designed to assist users in their personal development journey. You can explore articles on various subjects to gain knowledge and inspiration.
+
+![articles](https://i.postimg.cc/4yb57ZBV/articles.png)
 
 You have the option to bookmark your preferred articles, allowing you to revisit them at any point in the future.
 
@@ -75,7 +81,9 @@ You have the option to bookmark your preferred articles, allowing you to revisit
 ### Ideas
 <a name="ideas"></a>
 
-The ideas section is a unique feature of iLive. Each user will be able to find an idea that suits his preferences, the main purpose of the page is to inspire the user to acquire new experience and skills. The ideas page presents users with a set of idea cards. These ideas are randomly generated from a list and can be managed using three buttons: :
+![ideas](https://i.postimg.cc/zBhhfgN3/ideas.png)
+
+The ideas section is a unique feature of iLive. Each user will be able to find an idea that suits his preferences, the main purpose of the page is to inspire the user to acquire new experience and skills. The ideas page presents users with a set of idea cards. These ideas are randomly generated from a list and can be managed using three buttons:
 
 - Delete: Permanently removes the idea with no possibility of recovery.
 - Postpone: Allows users to save the idea for future consideration.
@@ -88,6 +96,16 @@ Some ideas come with additional functionality, for instance themed articles that
 
 The Photogallery is a special place where users can upload their photos, create photo reports, share their experiences, and add captions and descriptions to their photos. Users can interact with photos by liking them and viewing them in greater detail.
 
+<div align="center">  
+<details>
+<summary>Show screenshot</summary>
+    
+![photo-gallery](https://i.postimg.cc/dtwnMkVB/photogall.png)
+
+</details>
+
+</div>
+
 > It's important to note that users can delete their own photos from the
 > gallery, but they cannot delete photos uploaded by others. This
 > section fosters community engagement and sharing.
@@ -96,6 +114,12 @@ The Photogallery is a special place where users can upload their photos, create 
 
 ### User Profile
 <a name="user-profile"></a>
+
+<div align="center">  
+    
+![user-profile](https://i.postimg.cc/zDHTG473/userideas.png)
+
+</div>
 
 The user profile is a personalized page where users can manage their information and activities on iLive. It includes standard features such as:
 
@@ -203,6 +227,3 @@ Open your web browser and navigate to `http://localhost:3000`. You should see th
 <a name="browser-compatibility"></a>
 
 iLive is designed to work across a wide range of modern web browsers. It dynamically adapts its language to match your browser's settings, making it accessible and user-friendly. There are currently two languages available for selection.
-
-
-
