@@ -23,12 +23,9 @@ const Photogallery = (props) => {
   const [showDescription, setShowDescription] = useState(false);
   const [showSaveButton, setShowSaveButton] = useState(false);
 
- 
-
   const [userAvatar, setUserAvatar] = useState({
     avatar: '',
   });
-
 
   const [userInfo, setUserInfo] = useState({});
   console.log('Photogallery userInfo = ', userInfo);
