@@ -24,7 +24,7 @@ import UnderConstruction from './UnderConstruction';
 const App = () => {
   const [lang, setLang] = useState(() => {
     // Try to get the selected language from localStorage
-    const storedLanguage = localStorage.getItem('selectedLanguage');    
+    const storedLanguage = localStorage.getItem('selectedLanguage');
     if (!storedLanguage) {
       if (window.navigator.language.startsWith('ru')) {
         return 'ru'
@@ -42,13 +42,13 @@ const App = () => {
   const [currentUser, setCurrentUser] = useState();
   const navigate = useNavigate();
   console.log('lang', lang);
-  
- 
+
+
 
 
   useEffect(() => {
     const handleAuthorize = () => {
-      
+
       const jwt = auth.getJwtFromLS();
       if (jwt) {
         // Validate the token on page load
@@ -58,7 +58,7 @@ const App = () => {
             if (response.status === 200) {
               setLoggedIn(true);
             } else {
-              setLoggedIn(false);              
+              setLoggedIn(false);
             }
           })
           .catch((error) => {
@@ -69,7 +69,7 @@ const App = () => {
     };
 
     handleAuthorize();
-    
+
   }, []);
 
   useEffect(() => {
@@ -92,12 +92,12 @@ const App = () => {
       navigate('/home', { replace: true });
     }
   };
-  
+
 
   const handleRegister = async (email, password) => {
-       auth.register(password, email)
+    auth.register(password, email)
       .then(response => {
-        if (response) { 
+        if (response) {
           navigate('/login', { replace: true });
         }
       })
@@ -107,24 +107,24 @@ const App = () => {
       });
   };
 
-  
+
 
   const handleLogin = async (email, password) => {
-      auth.login(email, password)
-     .then((response) => {
-      console.log('response = ', response)
-      if (response.ok) {
-        setLoggedIn(true);                    
-        navigate('/ideas', { replace: true });
-        
-      }
-    })
-    .catch(err => {
-      console.error(err);       
-      
-      setErrMessage(translations[lang].login.errMessage);
-    
-    });
+    auth.login(email, password)
+      .then((response) => {
+        console.log('response = ', response)
+        if (response.ok) {
+          setLoggedIn(true);
+          navigate('/ideas', { replace: true });
+
+        }
+      })
+      .catch(err => {
+        console.error(err);
+
+        setErrMessage(translations[lang].login.errMessage);
+
+      });
 
   }
 
@@ -135,17 +135,17 @@ const App = () => {
       setIsMobile(window.innerWidth <= constants.WINDOW_INNERWIDHT);
     };
     window.addEventListener('resize', handleResize);
-    
+
     return () => {
       window.removeEventListener('resize', handleResize);
-   }
+    }
   }, []);
 
 
   useEffect(() => {
 
-  }, [loggedIn]); 
-  
+  }, [loggedIn]);
+
   const location = useLocation();
 
   useEffect(() => {
@@ -154,45 +154,45 @@ const App = () => {
 
   return (
     <>
-    <TranslationContext.Provider value={translations[lang]}>
-      <CurrentUserContext.Provider value={currentUser}>
-        <Routes>
-          <Route
-            path="/"
-            element={
-              loggedIn ? <Navigate to="/profile" replace /> : <Navigate to="/home" replace />
-            }
-          />
-          <Route path="/home" element={<Home loggedOut={handleLogOut} loggedIn={loggedIn} isMobile={isMobile} />} />
-          <Route
-            path="/profile"
-            element={<Profile loggedOut={handleLogOut} loggedIn={loggedIn} isMobile={isMobile} />}
-          />
-          <Route path="/ideas" element={<Ideas loggedOut={handleLogOut} loggedIn={loggedIn} isMobile={isMobile} />} />
-          <Route
-            path="/ideas/articles/:ideaArticleName"
-            element={<IdeaArticlePage loggedIn={loggedIn} isMobile={isMobile}  lang={lang}/>}
-          />
-          <Route path="/articles" element={<UsefulArticles loggedOut={handleLogOut} loggedIn={loggedIn} isMobile={isMobile} />} />
-          <Route path="/articles/article/:articleTitle" element={<ArticlePage loggedIn={loggedIn} isMobile={isMobile} />} />
-          <Route path="/tests" element={<UnderConstruction loggedIn={loggedIn} isMobile={isMobile} />} />
-          <Route path="/photogallery" element={<Photogallery loggedOut={handleLogOut} loggedIn={loggedIn} isMobile={isMobile} />} />
-          <Route path="/login" element={<Login onLogin={handleLogin} loggedIn={loggedIn} errMessage={errMessage} isMobile={isMobile} />} />
-          <Route path="/registration" element={<Registration onRegister={handleRegister}  errMessage={errMessage} isMobile={isMobile} />} />
-          <Route path="/logout" element={<Logout />} />
-        </Routes>
+      <TranslationContext.Provider value={translations[lang]}>
+        <CurrentUserContext.Provider value={currentUser}>
+          <Routes>
+            <Route
+              path="/"
+              element={
+                loggedIn ? <Navigate to="/profile" replace /> : <Navigate to="/home" replace />
+              }
+            />
+            <Route path="/home" element={<Home loggedOut={handleLogOut} loggedIn={loggedIn} isMobile={isMobile} />} />
+            <Route
+              path="/profile"
+              element={<Profile loggedOut={handleLogOut} loggedIn={loggedIn} isMobile={isMobile} />}
+            />
+            <Route path="/ideas" element={<Ideas loggedOut={handleLogOut} loggedIn={loggedIn} isMobile={isMobile} />} />
+            <Route
+              path="/ideas/articles/:ideaArticleName"
+              element={<IdeaArticlePage loggedIn={loggedIn} isMobile={isMobile} lang={lang} />}
+            />
+            <Route path="/articles" element={<UsefulArticles loggedOut={handleLogOut} loggedIn={loggedIn} isMobile={isMobile} />} />
+            <Route path="/articles/article/:articleTitle" element={<ArticlePage loggedIn={loggedIn} isMobile={isMobile} />} />
+            <Route path="/tests" element={<UnderConstruction loggedIn={loggedIn} isMobile={isMobile} />} />
+            <Route path="/photogallery" element={<Photogallery loggedOut={handleLogOut} loggedIn={loggedIn} isMobile={isMobile} />} />
+            <Route path="/login" element={<Login onLogin={handleLogin} loggedIn={loggedIn} errMessage={errMessage} isMobile={isMobile} />} />
+            <Route path="/registration" element={<Registration onRegister={handleRegister} errMessage={errMessage} isMobile={isMobile} />} />
+            <Route path="/logout" element={<Logout />} />
+          </Routes>
 
-         <CookieConsent
+          <CookieConsent
             location="bottom"
-            buttonText="Принять"
+            buttonText={translations[lang].cookies.buttonText}
             cookieName="myCookieConsent"
             style={{ background: "#333", opacity: 0.9 }}
             buttonStyle={{ color: "#4e503b", fontSize: "13px" }}
             expires={constants.COOKIES_EXPIRES}
           >
-            Этот сайт использует куки для лучшей работы.
+            {translations[lang].cookies.message}
           </CookieConsent>
-      </CurrentUserContext.Provider>
+        </CurrentUserContext.Provider>
       </TranslationContext.Provider>
     </>
   );

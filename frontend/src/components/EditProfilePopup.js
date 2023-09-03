@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import { CurrentUserContext } from '../context/CurrentUserContext';
 import Form from './Form';
 
 function EditProfilePopup(props) {
@@ -59,7 +58,7 @@ function EditProfilePopup(props) {
           value={formData.quote}
           onChange={handleChange}
           id='profile-quote'
-          className='form__input form__input_quote' 
+          className='form__input form__input_quote'
           type='text'
           name='quote'
           minLength='2'

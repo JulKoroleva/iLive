@@ -1,4 +1,4 @@
-.article__conclusion{
+.article__conclusion {
     margin-top: 30px;
     width: 80%;
     font-family: "Times New Roman", Times, serif;
@@ -9,6 +9,5 @@
     font-weight: 400;
     text-decoration: none solid rgb(86, 86, 86);
     font-style: normal;
-
     text-transform: none;
 }

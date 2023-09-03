@@ -7,42 +7,42 @@
 @import url(./__third-layer/layer__third-layer.css);
 
 .layer {
-	height: 130vh;
-	width: 100%;
-	position: absolute;
-	background-size: cover;
-	background-position: center;
-	will-change: transform;
-	z-index: 2;
-	transition: var(--transition);
-  
+  height: 130vh;
+  width: 100%;
+  position: absolute;
+  background-size: cover;
+  background-position: center;
+  will-change: transform;
+  z-index: 2;
+  transition: var(--transition);
+
 }
 
-@media screen and (min-width: 270px) and  (max-width:480px){
+@media screen and (min-width: 270px) and (max-width:480px) {
   .layer {
     height: 43vh;
     min-height: 284px;
   }
- }
+}
 
-@media screen and (min-width: 480px) and  (max-width:750px){
+@media screen and (min-width: 480px) and (max-width:750px) {
   .layer {
     height: 51vh;
     min-height: 450px;
   }
- }
+}
 
 
- @media screen and (min-width: 750px) and  (max-width:1024px){
+@media screen and (min-width: 750px) and (max-width:1024px) {
   .layer {
     height: 77vh;
     min-height: 721px;
   }
- }
+}
 
- @media screen and (min-width: 1024px) and  (max-width:1280px){
+@media screen and (min-width: 1024px) and (max-width:1280px) {
   .layer {
     height: 83vh;
     min-height: 812px;
   }
- }
+}

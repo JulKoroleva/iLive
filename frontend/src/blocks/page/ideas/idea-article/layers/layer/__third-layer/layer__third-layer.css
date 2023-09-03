@@ -1,8 +1,5 @@
-
-
-
-.layer__third-layer{
+.layer__third-layer {
     background-image: url(/src/images/articles/ideasArticles/kamchatka/trird-layer.png);
     transform: translate3d(0, calc(var(--scrollTop) / 2.5), 0);
-    z-index: 2;       
-   }
+    z-index: 2;
+}

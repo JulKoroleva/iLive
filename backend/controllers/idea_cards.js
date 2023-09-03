@@ -10,57 +10,57 @@ const userIdeaCards = async (req, res) => {
   res.setHeader('Access-Control-Allow-Origin', '*');
   res.setHeader('Access-Control-Allow-Methods', 'GET');
   res.setHeader('Access-Control-Allow-Headers', 'Content-Type');
- 
-  
+
+
 
   const userData = req.headers;
-  console.log('userIdeaCards userData= ',userData)
+  console.log('userIdeaCards userData= ', userData)
   try {
     const user = await userService.findUserByJWT(userData);
     console.log(`userIdeaCards user.`, user);
-    if (user) {   
-     // Find user collection by name
+    if (user) {
+      // Find user collection by name
       //const collection = user.collections.find((item) => item.name === `${user.email}_general-cards`);
-      const userGeneralCardsCollection = user.collections[`${user.email}_general-cards`]; 
-      console.log(`userGeneralCardsCollection.`, userGeneralCardsCollection);       
-        if (userGeneralCardsCollection) {
-          // Send response to Fetch request
-          console.log(`userGeneralCardsCollection.`, userGeneralCardsCollection); 
-          const ideaDataBase = await IdeaCard.find();
+      const userGeneralCardsCollection = user.collections[`${user.email}_general-cards`];
+      console.log(`userGeneralCardsCollection.`, userGeneralCardsCollection);
+      if (userGeneralCardsCollection) {
+        // Send response to Fetch request
+        console.log(`userGeneralCardsCollection.`, userGeneralCardsCollection);
+        const ideaDataBase = await IdeaCard.find();
 
-          const originalPath = path.join(__dirname, 'IdeasArticles', 'ideasImages');
-          const modifiedPath = originalPath.replace('controllers', 'components');
-          
-         // Formation of an array of objects with information about images
-          const ideasData = userGeneralCardsCollection.map(idea => ({
-            _id: idea._id,
-            key: idea.key,
-            title: idea.title,
-            subtitle: idea.subtitle,
-            image: idea.image, // Relative path to the image
-            isDone: idea.isDone,
-            link: idea.link,
-            name: idea.name
-          }));
-          
-          console.log('__dirname:', ideasData.image);
-          console.log('ideaData:', ideasData);
-    
-          
+        const originalPath = path.join(__dirname, 'IdeasArticles', 'ideasImages');
+        const modifiedPath = originalPath.replace('controllers', 'components');
 
-          return res.json(ideasData);
-        } else {
-          console.log(`Collection named '${user.email}_general-cards' not found.`);
-          
-        }
+        // Formation of an array of objects with information about images
+        const ideasData = userGeneralCardsCollection.map(idea => ({
+          _id: idea._id,
+          key: idea.key,
+          title: idea.title,
+          subtitle: idea.subtitle,
+          image: idea.image, // Relative path to the image
+          isDone: idea.isDone,
+          link: idea.link,
+          name: idea.name
+        }));
+
+        console.log('__dirname:', ideasData.image);
+        console.log('ideaData:', ideasData);
+
+
+
+        return res.json(ideasData);
+      } else {
+        console.log(`Collection named '${user.email}_general-cards' not found.`);
+
+      }
     } else {
       console.log(`User named '${user.email}' not found.`);
     }
   } catch (error) {
-      console.error('An error has occurred:', error);
-      res.status(500).json({ error: 'A server error has occurred' });
-      return res.json(error);
-  } 
+    console.error('An error has occurred:', error);
+    res.status(500).json({ error: 'A server error has occurred' });
+    return res.json(error);
+  }
 }
 
 const addPersonalUserIdeaCards = async (req, res) => {
@@ -81,7 +81,7 @@ const addPersonalUserIdeaCards = async (req, res) => {
       let selectedItem = generalCardCollection[selectedItemIndex];
       console.log('selectedItem', selectedItem);
 
-      
+
 
       let newDocument = { ...selectedItem };
       personalCardCollection.unshift(newDocument);
@@ -108,7 +108,7 @@ const addPersonalUserIdeaCards = async (req, res) => {
   }
 };
 
-const deleteCardForever  = async (req, res) => {
+const deleteCardForever = async (req, res) => {
   const userData = req.headers;
   const { key } = req.body;
 
@@ -120,23 +120,23 @@ const deleteCardForever  = async (req, res) => {
 
     let selectedItemIndex = generalCardCollection.findIndex((item) => item.key === key);
     console.log('selectedItemIndex', selectedItemIndex);
-   
-    if (selectedItemIndex !== -1) {      
+
+    if (selectedItemIndex !== -1) {
       generalCardCollection.splice(selectedItemIndex, 1); // Remove the selected object from generalCardCollection
       console.log('generalCardCollection after removal', generalCardCollection);
 
       user.markModified('collections');
       await user.save();
       console.log('Item removed successfully');
-     } else {
-       console.log('The selected object was not found in generalCardCollection');
-     }
+    } else {
+      console.log('The selected object was not found in generalCardCollection');
+    }
 
-     res.status(200).json({ success: true });
-   } catch (error) {
-     console.error('An error occurred:', error);
-     res.status(500).json({ error: 'A server error has occurred' });
-   }
+    res.status(200).json({ success: true });
+  } catch (error) {
+    console.error('An error occurred:', error);
+    res.status(500).json({ error: 'A server error has occurred' });
+  }
 };
 
 const getPersonalUserIdeaList = async (req, res) => {
@@ -145,54 +145,54 @@ const getPersonalUserIdeaList = async (req, res) => {
 
   try {
     const user = await userService.findUserByJWT(userData);
-    if (user) {   
+    if (user) {
       // Find user collection by name
       //const collection = user.collections.find((item) => item.name === `${user.email}_personal-cards`);
       const userPersonalCardsCollection = user.collections[`${user.email}_personal-cards`];
       const filteredCards = userPersonalCardsCollection.filter(item => item.isDone === false);
-        if (filteredCards) {
-          // Send response to Fetch request   
-          return res.json(filteredCards);
-        } else {
-          console.log(`Collection named '${user.email}_personal-cards' not found.`);
-        }
+      if (filteredCards) {
+        // Send response to Fetch request   
+        return res.json(filteredCards);
+      } else {
+        console.log(`Collection named '${user.email}_personal-cards' not found.`);
+      }
     } else {
       console.log(`User named '${user.email}' not found.`);
     }
   } catch (error) {
-      console.error('An error has occurred:', error);
-      res.status(500).json({ error: 'A server error has occurred' });
-  }   
+    console.error('An error has occurred:', error);
+    res.status(500).json({ error: 'A server error has occurred' });
+  }
 }
 
 
-const getIsDoneIdeaCards = async (req, res) => {  
+const getIsDoneIdeaCards = async (req, res) => {
 
-    const userData = req.headers;
-  
-    try {
-      const user = await userService.findUserByJWT(userData);
-      if (user) {           
-        const userPersonalCardsCollection = user.collections[`${user.email}_personal-cards`];
-        const filteredCards = userPersonalCardsCollection.filter(item => item.isDone === true);
-          if (filteredCards) {
-           // Send response to Fetch request        
-            return res.json(filteredCards);
-          } else {
-            console.log(`Collection named '${user.email}_personal-cards' not found.`);
-          }
+  const userData = req.headers;
+
+  try {
+    const user = await userService.findUserByJWT(userData);
+    if (user) {
+      const userPersonalCardsCollection = user.collections[`${user.email}_personal-cards`];
+      const filteredCards = userPersonalCardsCollection.filter(item => item.isDone === true);
+      if (filteredCards) {
+        // Send response to Fetch request        
+        return res.json(filteredCards);
       } else {
-        console.log(`User named '${user.email}' not found.`);
+        console.log(`Collection named '${user.email}_personal-cards' not found.`);
       }
-    } catch (error) {
-        console.error('An error has occurred:', error);
-        res.status(500).json({ error: 'A server error has occurred' });
-    }     
+    } else {
+      console.log(`User named '${user.email}' not found.`);
+    }
+  } catch (error) {
+    console.error('An error has occurred:', error);
+    res.status(500).json({ error: 'A server error has occurred' });
+  }
 }
 
 
 
-const changeCardCompletedStatus = async (req, res) => {  
+const changeCardCompletedStatus = async (req, res) => {
 
   const userData = req.headers;
   const { key, isDone } = req.body;
@@ -201,14 +201,14 @@ const changeCardCompletedStatus = async (req, res) => {
   try {
     const user = await userService.findUserByJWT(userData);
 
- 
+
 
     let personalCardCollection = user.collections[`${user.email}_personal-cards`];
     console.log('let generalCardCollection = user.collections.find', personalCardCollection);
 
     let selectedItemIndex = personalCardCollection.findIndex((item) => item.key === key);
     console.log('selectedItemIndex', selectedItemIndex);
-    
+
 
     user.collections[`${user.email}_personal-cards`][selectedItemIndex].isDone = isDone;
     user.markModified('collections');
@@ -233,7 +233,7 @@ const changeCardCompletedStatus = async (req, res) => {
 };
 
 
-const giveUpAndDelete = async (req, res) => { 
+const giveUpAndDelete = async (req, res) => {
   const userData = req.headers;
   const { key } = req.body;
 
@@ -247,13 +247,13 @@ const giveUpAndDelete = async (req, res) => {
 
     let selectedItemIndex = personalCardCollection.findIndex((item) => item.key === key);
     console.log('selectedItemIndex', selectedItemIndex);
-    
+
 
     if (selectedItemIndex !== -1) {
       let selectedItem = personalCardCollection[selectedItemIndex];
       console.log('selectedItem', selectedItem);
 
-      
+
 
       let newDocument = { ...selectedItem };
       generalCardCollection.unshift(newDocument);
@@ -282,11 +282,11 @@ const giveUpAndDelete = async (req, res) => {
 
 
 module.exports = {
-    userIdeaCards,
-    addPersonalUserIdeaCards,
-    getPersonalUserIdeaList,
-    getIsDoneIdeaCards,
-    changeCardCompletedStatus,
-    giveUpAndDelete,
-    deleteCardForever
-  };
+  userIdeaCards,
+  addPersonalUserIdeaCards,
+  getPersonalUserIdeaList,
+  getIsDoneIdeaCards,
+  changeCardCompletedStatus,
+  giveUpAndDelete,
+  deleteCardForever
+};

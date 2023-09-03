@@ -1,68 +1,66 @@
+.element__avatar {
+  position: relative;
+  display: flex;
+  width: 40px;
+  min-width: 40px;
+  height: 40px;
+  border-radius: 50px;
+  border: 2px solid rgb(255, 255, 255);
+  box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.5);
+  margin-left: 20px;
+  overflow: hidden;
+}
 
-.element__avatar{
-    position: relative;
-    display: flex;
-    width: 40px;
+.owner-avatar {
+  display: flex;
+
+  height: 100%;
+  width: 100%;
+  display: flex;
+  object-fit: cover;
+}
+
+
+
+
+
+@media screen and (min-width: 750px) and (max-width:1024px) {
+
+
+  .element__avatar {
     min-width: 40px;
-    height: 40px;
-    border-radius: 50px;
-    border: 2px solid rgb(255, 255, 255); /* рамка */
-    box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.5); /* тень */
-    margin-left: 20px;
-    overflow: hidden;
+    max-width: 50px;
+    max-height: 50px;
   }
 
-  .owner-avatar{
-    display: flex; 
-        
-    height: 100%;       
-    width: 100%;      
-    display: flex;  
-    object-fit: cover;
-  }
-
-  
 
 
- 
- @media screen and (min-width: 750px) and (max-width:1024px) {
+}
 
 
-  .element__avatar{
-   min-width: 40px;
-   max-width: 50px;
-   max-height: 50px;
-  }
+@media screen and (min-width: 480px) and (max-width:750px) {
 
- 
 
- }
-
- 
- @media screen and (min-width: 480px) and (max-width:750px) {
-    
-
-  .element__avatar{
+  .element__avatar {
     max-width: 40px;
     max-height: 40px;
   }
 
 
- }
-
- 
- @media screen and (min-width: 270px) and (max-width:480px) {
-    
+}
 
 
-  .element__avatar{
+@media screen and (min-width: 270px) and (max-width:480px) {
+
+
+
+  .element__avatar {
     min-width: 34px;
-      width: 34px;
-      height: 34px;
+    width: 34px;
+    height: 34px;
   }
 
 
 
 
- }
-  
+}

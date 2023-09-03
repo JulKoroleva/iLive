@@ -1,38 +1,26 @@
-.ideas__carousel-card_image {    
-    object-fit: cover;
-    width: 100%;
-    height: 100%;    
-    border-radius: 30px;
+.ideas__carousel-card_image {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  border-radius: 30px;
 }
 
 
 
 @media screen and (min-width: 480px) and (max-width:750px) {
- 
 
-    .ideas__carousel-card_image{      
-      border-radius: 20px;
-    }
-  
-   
-  
-  
-   }
-  
-  
-  
-  
-  
-  
-  
-  
-  
-   @media screen and (min-width: 270px) and (max-width:480px) {
-  
-    .ideas__carousel-card_image{     
-      border-radius: 15px;
-    }
-  
-   
-  
+  .ideas__carousel-card_image {
+    border-radius: 20px;
   }
+
+}
+
+@media screen and (min-width: 270px) and (max-width:480px) {
+
+  .ideas__carousel-card_image {
+    border-radius: 15px;
+  }
+
+
+
+}

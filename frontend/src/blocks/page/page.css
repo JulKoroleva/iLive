@@ -7,75 +7,58 @@
 @import url(./__sticky-header/page__sticky-header.css);
 @import url(./__button/page__button.css);
 @import url(./page__construction/page__construction.css);
+
 .page {
-    max-width: 1200px;
-    width: 1100px;
-    min-height: 1000px;
-    display: flex;
-    flex-direction: column;
-    
-    align-items: center;
-    align-content: center;
-    margin: 0 auto; 
-    background-color: white;
-    position: relative;
-  
+  max-width: 1200px;
+  width: 1100px;
+  min-height: 1000px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-content: center;
+  margin: 0 auto;
+  background-color: white;
+  position: relative;
 }
 
-
-
 li {
- list-style-type: none;
+  list-style-type: none;
 }
 
 ul {
-    margin-left: 0;
-    padding-left: 0;
+  margin-left: 0;
+  padding-left: 0;
+}
+
+.error-message {
+  position: absolute;
+  bottom: 0px;
+  left: 20px;
+  color: rgb(163, 52, 52);
+  font-size: 14px;
+  margin-top: 5px;
+}
+
+@media screen and (min-width: 270px) and (max-width:1024px) {
+  .page {
+    width: 100%;
+    margin: 0;
   }
 
-  .error-message {
-    position: absolute;
-    bottom: 0px;
-    left: 20px;
-    color: rgb(163, 52, 52);
-    font-size: 14px;
-    margin-top: 5px;
+  .page.photogallery {
+    overflow: hidden;
   }
 
+  .page__sticky-header {
+    width: 100vw;
+    margin: 0;
 
+  }
+}
 
-  @media screen and (min-width: 270px) and  (max-width:1024px){
-    .page {
-      width: 100%;
-      margin: 0;
-    
-    }
-    .page.photogallery {
-      overflow: hidden;
-    }
+@media screen and (min-width: 1024px) and (max-width:1280px) {
+  .page {
+    width: 80vw;
+  }
 
-    .page__sticky-header{
-      width: 100vw;
-      margin: 0;
-     
-    }
-   }
-
-   @media screen and (min-width: 1024px) and  (max-width:1280px){
-    .page {   
-    
-     width: 80vw;
-    
-    }
-
-   }
-
-  
-
-
-
-
-
-  
-
-
+}

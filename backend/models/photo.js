@@ -1,33 +1,33 @@
 const mongoose = require('mongoose');
 
 const photoSchema = new mongoose.Schema({
- title: { 
+  title: {
     type: String,
-    required: true, 
-    },
+    required: true,
+  },
   name: {
-    type: String,    
-   
+    type: String,
+
   },
   description: {
     type: Object,
-    required: true, 
+    required: true,
   },
   user: {
-    type: String,    
-    required: true,  
+    type: String,
+    required: true,
   },
   path: {
-    type: String,    
-    
+    type: String,
+
   },
-  
+
   likes: [
   ],
 
   ownerAvatar: {
     type: Object,
-    required: true, 
+    required: true,
   }
 });
 

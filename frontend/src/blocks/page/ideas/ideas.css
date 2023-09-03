@@ -1,56 +1,47 @@
 @import url(./__carousel-card/ideas__carousel-card.css);
 @import url(./idea-article/idea-article.css);
 
-.ideas{
-    max-width: 1600px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    justify-self: center;
+.ideas {
+  max-width: 1600px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  justify-self: center;
 }
 
 .ideas.loading {
   opacity: 0;
 }
 
-  
-  @media screen and (min-width:1024px) and (max-width:1280px) {
-   
-  
-    .ideas{
-      width: max-content;
-    }
-  
-   }
-  
+@media screen and (min-width:1024px) and (max-width:1280px) {
+
+  .ideas {
+    width: max-content;
+  }
+
+}
+
 @media screen and (min-width:750px) and (max-width:1024px) {
- 
-  .ideas{
+
+  .ideas {
     width: 95vw;
   }
-  
- }
 
+}
 
- 
- @media screen and (min-width:480px) and (max-width:750px) {
-  
-  
-  .ideas{
+@media screen and (min-width:480px) and (max-width:750px) {
+
+  .ideas {
     width: 95vw;
   }
-  
-  
- }
 
- @media screen and (min-width:270px) and (max-width:480px) {
-  
- 
-  .ideas{
+}
+
+@media screen and (min-width:270px) and (max-width:480px) {
+
+  .ideas {
     width: 95vw;
   }
-  
- }
 
-  
+}

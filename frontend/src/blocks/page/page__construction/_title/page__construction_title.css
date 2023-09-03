@@ -1,4 +1,4 @@
-.page__construction_title{
+.page__construction_title {
     text-align: center;
     width: 90%;
     font-family: Georgia, serif;
@@ -14,7 +14,7 @@
 }
 
 
-.page__construction_text_button{
+.page__construction_text_button {
     text-align: center;
     font-size: 20px;
     text-decoration: none;
@@ -24,17 +24,17 @@
     border-radius: 20px;
 }
 
-@media screen and (min-width: 270px) and  (max-width:750px){
-    .page__construction_title{
-       
+@media screen and (min-width: 270px) and (max-width:750px) {
+    .page__construction_title {
+
         width: 90%;
-       margin-top: 10px;
+        margin-top: 10px;
         font-size: 5px;
         letter-spacing: 1px;
-       
+
     }
 
-    .page__construction_text_button{
+    .page__construction_text_button {
         font-size: 10px;
     }
-   }
+}

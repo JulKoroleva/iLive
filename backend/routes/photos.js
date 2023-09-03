@@ -5,7 +5,6 @@ const auth = require('../middlewares/auth');
 
 const { getPhotogallery, postNewPhoto, deletePhoto, likePhoto } = require('../controllers/photos');
 
-
 router.get('/photogallery', auth, getPhotogallery);
 
 router.post('/photogallery/post', auth, fileMulter.single('photo'), postNewPhoto);

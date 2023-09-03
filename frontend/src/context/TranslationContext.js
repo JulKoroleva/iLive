@@ -70,8 +70,13 @@ export const translations = {
     },
     articles: {
       emptyTitle: 'Empty'
+    },
+    cookies: {
+      buttonText: 'Accept',
+      message: 'This website uses cookies to improve your user experience.'
     }
   },
+
   ru: {
     lang : 'ru' ,
 
@@ -139,6 +144,10 @@ export const translations = {
     },
     articles: {
       emptyTitle: 'Пусто'
+    },
+    cookies: {
+      buttonText: 'Принять',
+      message: 'Этот сайт использует куки для лучшей работы.'
     }
   },
 }; 

@@ -3,7 +3,6 @@ import React, { useState, useEffect, useContext } from 'react';
 import { TranslationContext } from '../context/TranslationContext';
 
 import * as constants from '../constants/constants';
-import * as auth from '../utils/auth';
 import APIManager from '../utils/api';
 
 function Carousel() {

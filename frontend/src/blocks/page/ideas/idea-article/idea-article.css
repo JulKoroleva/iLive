@@ -6,32 +6,31 @@
 @import url(./layers/layers.css);
 
 :root {
-    --scrollTop: 0;
-  }
-  
-  
-  .idea-article{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 70%;
-    color: aliceblue;
-    text-align: center;
-  }
+  --scrollTop: 0;
+}
 
-  .kamchatka__article{
-    background-color: #020704;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+.idea-article {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 70%;
+  color: aliceblue;
+  text-align: center;
+}
+
+.kamchatka__article {
+  background-color: #020704;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+@media screen and (min-width: 270px) and (max-width:1024px) {
+  .idea-article {
+    width: 90vw;
+    margin: 0;
+
   }
-  
-  @media screen and (min-width: 270px) and  (max-width:1024px){
-    .idea-article {
-      width: 90vw;
-      margin: 0;
-    
-    }
-   }
+}

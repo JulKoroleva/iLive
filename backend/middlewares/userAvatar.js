@@ -4,7 +4,7 @@ const storage = multer.diskStorage({
     destination(req, file, cb) {
         cb(null, 'images/users/')
     },
-    filename(req, file, cb){
+    filename(req, file, cb) {
         cb(null, file.originalname)
     }
 })
@@ -20,4 +20,4 @@ const fileFilter = (req, file, cb) => {
 }
 
 
-module.exports = multer({storage, fileFilter})
+module.exports = multer({ storage, fileFilter })

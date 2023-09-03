@@ -1,13 +1,11 @@
-
-.idea-article__subtitle{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: rgb(255, 255, 255);
-   
-    margin: 0;
-    font-size: 30px;
-    width: 70%;
-    text-align: center;
-    text-transform: uppercase;
-  }
+.idea-article__subtitle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: rgb(255, 255, 255);
+  margin: 0;
+  font-size: 30px;
+  width: 70%;
+  text-align: center;
+  text-transform: uppercase;
+}

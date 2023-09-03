@@ -1,22 +1,21 @@
 .sticky-header__button_logout {
-    position: absolute;
-    bottom: 30%;
-    right: -7%;
-    width: 10%;
-    height: 10%;
-    width: 40px;
-    color: black;
-    padding: 10px;
-    background-image: url(/src/images/header/logout.png);
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-color: transparent;
-  }
+  position: absolute;
+  bottom: 30%;
+  right: -7%;
+  width: 10%;
+  height: 10%;
+  width: 40px;
+  color: black;
+  padding: 10px;
+  background-image: url(/src/images/header/logout.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-color: transparent;
+}
 
-  
+
 @media screen and (min-width: 750px) and (max-width: 1280px) {
-    .sticky-header__button_logout {
-      right: -80px;
-    }
+  .sticky-header__button_logout {
+    right: -80px;
   }
-
+}

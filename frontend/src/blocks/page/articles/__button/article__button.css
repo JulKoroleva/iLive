@@ -1,24 +1,23 @@
 @import url(./_like-button/article__button_like-button.css);
 
 .articles__button_favorite {
-    display: flex;
-    flex-direction: row;
-    align-self: center;
-    width: 45px;
-    height: 35px;
-  }
-  
-  .articles__button_favorite h2 {
-    margin: auto;
-  }
+  display: flex;
+  flex-direction: row;
+  align-self: center;
+  width: 45px;
+  height: 35px;
+}
 
-  .userArticles__active{
-    opacity: 0.5;
-  }
-  
-  .articles__button_layout {
-    width: 50px;
-    height: 100%;
-    background-color: blue;
-  }
-  
+.articles__button_favorite h2 {
+  margin: auto;
+}
+
+.userArticles__active {
+  opacity: 0.5;
+}
+
+.articles__button_layout {
+  width: 50px;
+  height: 100%;
+  background-color: blue;
+}

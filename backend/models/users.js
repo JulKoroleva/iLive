@@ -1,31 +1,31 @@
 const mongoose = require('mongoose');
 
 const userSchema = new mongoose.Schema({
- email: { 
+  email: {
     type: String,
-    required: true, 
-    },   
+    required: true,
+  },
   password: {
-    type: String,    
-    required: true,  
+    type: String,
+    required: true,
   },
-  name: { 
-    type: String,   
+  name: {
+    type: String,
   },
-  age: { 
-    type: String,   
-    },
-  avatar: { 
-    type: String, 
+  age: {
+    type: String,
+  },
+  avatar: {
+    type: String,
     default: 'default-user-image.svg',
-    },
-    quote: {
-    type: String,    
+  },
+  quote: {
+    type: String,
   },
 
   collections: {
     type: Object,
-    required: true, 
+    required: true,
   },
 
   drawing: {

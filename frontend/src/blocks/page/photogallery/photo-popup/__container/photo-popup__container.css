@@ -1,68 +1,51 @@
 @import url(./_content/photo-popup__container_content.css);
 
 .photo-popup__container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-  
-    max-width: 500px;
-    min-width: 400px;
-    max-height: 700px; 
-  
-    background: white;
-    box-shadow: 0px 0px 53px -4px rgba(0, 0, 0, 0.2);
-    border-radius: 25px;
-    z-index: 125;
-    overflow: visible;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 500px;
+  min-width: 400px;
+  max-height: 700px;
+  background: white;
+  box-shadow: 0px 0px 53px -4px rgba(0, 0, 0, 0.2);
+  border-radius: 25px;
+  z-index: 125;
+  overflow: visible;
+}
+
+
+@media screen and (min-width: 750px) and (max-width:1024px) {
+
+  .photo-popup__container {
+    max-height: 700px;
+    max-width: 490px;
+
+  }
+}
+
+
+@media screen and (min-width: 480px) and (max-width:750px) {
+
+  .photo-popup__container {
+    max-height: 700px;
+    max-width: 460px;
+
   }
 
+}
 
-  @media screen and (min-width: 750px) and (max-width:1024px) {
-    
-  
 
-    .photo-popup__container {
-      max-height: 700px;
-      max-width: 490px;
-      
-    }
-  
-  
-   }
-  
-   
-   @media screen and (min-width: 480px) and (max-width:750px) {
-      
-    
-  
-    
-  
-    .photo-popup__container {
-     max-height: 700px;
-      max-width: 460px;
-     
-    }
-  
-  
-  
-   }
-  
-   
-   @media screen and (min-width: 270px) and (max-width:480px) {
-      
-    
-  
-    .photo-popup__container {
-      max-height: 600px;
-      width: 90vw;
-      min-width:270px
-     
-    }
-  
-    
-  
-   }
+@media screen and (min-width: 270px) and (max-width:480px) {
+
+  .photo-popup__container {
+    max-height: 600px;
+    width: 90vw;
+    min-width: 270px
+  }
+
+}

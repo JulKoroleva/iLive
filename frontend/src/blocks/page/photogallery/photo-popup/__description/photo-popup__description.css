@@ -1,26 +1,24 @@
 .photo-popup__description {
-    margin: 65px 0 20px;
-    font-size: 12px;
-    width: 100%;
-    max-width: 450px;
-    position: relative;
-    height: 50%;
-    max-height: 80px;
-    overflow-y: scroll;
-    z-index: 0; /* Set a lower z-index for the description, so it goes behind the title */
-    word-wrap: break-word;
-  }
+  margin: 65px 0 20px;
+  font-size: 12px;
+  width: 100%;
+  max-width: 450px;
+  position: relative;
+  height: 50%;
+  max-height: 80px;
+  overflow-y: scroll;
+  z-index: 0;
+  word-wrap: break-word;
+}
 
-  
 .photo-popup__description::-webkit-scrollbar {
-    width: 0;
+  width: 0;
 }
 
 .photo-popup__description::-webkit-scrollbar-thumb {
-    background-color: transparent;
- 
-}
+  background-color: transparent;
 
+}
 
 .photo-popup__description_text {
   width: 100%;
@@ -28,52 +26,36 @@
 }
 
 @media screen and (min-width: 750px) and (max-width:1024px) {
-    
-  
 
-    .photo-popup__description {
-      margin-top: 70px;
-      font-size: 14px;
-      height: 100%;
-      max-height: 90px;
-    }
-  
-  
-   }
-  
-   
-   @media screen and (min-width: 480px) and (max-width:750px) {
-      
-    
-  
-    
-  
-    .photo-popup__description {
-        margin-top: 50px;
-        font-size: 14px;
-        height: 100%;
-        max-height: 100px;
-    }
-  
-  
-  
-   }
-  
-   
-   @media screen and (min-width: 270px) and (max-width:480px) {
-      
-    
-  
-    .photo-popup__description {
-      margin-top: 60px;
-      margin-bottom: 10px;
+  .photo-popup__description {
+    margin-top: 70px;
+    font-size: 14px;
+    height: 100%;
+    max-height: 90px;
+  }
+
+}
+
+@media screen and (min-width: 480px) and (max-width:750px) {
+
+  .photo-popup__description {
+    margin-top: 50px;
+    font-size: 14px;
+    height: 100%;
+    max-height: 100px;
+  }
+
+}
+
+@media screen and (min-width: 270px) and (max-width:480px) {
+
+  .photo-popup__description {
+    margin-top: 60px;
+    margin-bottom: 10px;
     font-size: 10px;
     height: 100%;
     max-height: 130px;
     width: 80vw;
-    }
-  
-   
-    
-  
-   }
+  }
+
+}

@@ -20,7 +20,7 @@ const CalendarLife = ({ userData }) => {
   };
 
 
-  useEffect(() => {    
+  useEffect(() => {
     const livedWeeks = calculateWeeksLived();
     setWeeksLived(livedWeeks);
   }, [userData.age]);
@@ -61,31 +61,31 @@ const CalendarLife = ({ userData }) => {
       ) : (
         <>
           <h1 className='calendar__title'>{translation.calendar.title}</h1>
-          <p className='calendar__text' style={{width: '50%', textAlign:'center'}}>
+          <p className='calendar__text' style={{ width: '50%', textAlign: 'center' }}>
             {translation.calendar.subtitle}
           </p>
           {translation.lang === 'ru' ? (
             <>
-            <h3 style={{width: '100%', textAlign:'center', marginBottom: '0'}}>{translation.calendar.isLived}:</h3>
-            <h3 style={{width: '100%', textAlign:'center', fontSize:'15px', fontWeight: '200'}}>
-              {' '}
-              {years > 0 ? `${years} ${formatWord(years, 'год', 'года', 'лет')}` : ''}
-              {months > 0 ? ` ${months} ${formatWord(months, 'месяц', 'месяца', 'месяцев')}` : ''}
-              {weeks > 0 ? ` ${weeks} ${formatWord(weeks, 'неделя', 'недели', 'недель')}` : ''}
-              {days > 0 ? ` ${days} ${formatWord(days, 'день', 'дня', 'дней')}` : ''}
-            </h3>
-            </>
-            ) : ( 
-              <h3 style={{width: '90%', textAlign:'center'}}>
-                {translation.calendar.isLived}:{' '}
-                {`${years} ${years > 1 ? 'years' : 'year'} `}
-                {`${months} ${months > 1 ? 'months' : 'month'} `}
-                {`${weeks} ${weeks > 1 ? 'weeks' : 'week'} `}
-                {`${days} ${days > 1 ? 'days' : 'day'} `}
+              <h3 style={{ width: '100%', textAlign: 'center', marginBottom: '0' }}>{translation.calendar.isLived}:</h3>
+              <h3 style={{ width: '100%', textAlign: 'center', fontSize: '15px', fontWeight: '200' }}>
+                {' '}
+                {years > 0 ? `${years} ${formatWord(years, 'год', 'года', 'лет')}` : ''}
+                {months > 0 ? ` ${months} ${formatWord(months, 'месяц', 'месяца', 'месяцев')}` : ''}
+                {weeks > 0 ? ` ${weeks} ${formatWord(weeks, 'неделя', 'недели', 'недель')}` : ''}
+                {days > 0 ? ` ${days} ${formatWord(days, 'день', 'дня', 'дней')}` : ''}
               </h3>
-              )
-            }
-          
+            </>
+          ) : (
+            <h3 style={{ width: '90%', textAlign: 'center' }}>
+              {translation.calendar.isLived}:{' '}
+              {`${years} ${years > 1 ? 'years' : 'year'} `}
+              {`${months} ${months > 1 ? 'months' : 'month'} `}
+              {`${weeks} ${weeks > 1 ? 'weeks' : 'week'} `}
+              {`${days} ${days > 1 ? 'days' : 'day'} `}
+            </h3>
+          )
+          }
+
 
           <div className="calendar-container">
             {[...Array(91)].map((_, yearIndex) => (
@@ -96,9 +96,8 @@ const CalendarLife = ({ userData }) => {
                   return (
                     <div
                       key={weekIndex}
-                      className={`calendar-cell ${isLived ? 'calendar-cell-lived' : ''} ${
-                        isFifthCell ? 'calendar-cell-five-year' : ''
-                      }`}
+                      className={`calendar-cell ${isLived ? 'calendar-cell-lived' : ''} ${isFifthCell ? 'calendar-cell-five-year' : ''
+                        }`}
                     ></div>
                   );
                 })}

@@ -1,15 +1,16 @@
 .slide-right {
-    animation-name: slideToRight;
+  animation-name: slideToRight;
+}
+
+
+@keyframes slideToRight {
+  0% {
+    transform: translateX(100%);
+    opacity: 0;
   }
 
-    
-  @keyframes slideToRight {
-    0% {
-      transform: translateX(100%);
-      opacity: 0;
-    }
-    100% {
-      transform: translateX(0);
-      opacity: 1;
-    }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
   }
+}

@@ -1,21 +1,17 @@
+.element__likes {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  align-items: center;
 
-.element__likes { 
+}
 
-    display: flex; 
-    flex-direction: row; 
-    position: relative; 
-    align-items: center;
-  
-  } 
-  .element__number-of-likes { 
-
-    font-weight: 400; 
-    font-style: normal; 
-    font-size: 13px; 
-    line-height: 15,73px;   
-    text-align: center;   
-    color: black;   
-  
-   
-    margin-right: 5px;  
-  } 
+.element__number-of-likes {
+  font-weight: 400;
+  font-style: normal;
+  font-size: 13px;
+  line-height: 15, 73px;
+  text-align: center;
+  color: black;
+  margin-right: 5px;
+}

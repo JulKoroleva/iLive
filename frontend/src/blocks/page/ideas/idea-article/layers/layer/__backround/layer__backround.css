@@ -1,7 +1,5 @@
-
-
-.layer__backround{
+.layer__backround {
     background-image: url(/src/images/articles/ideasArticles/kamchatka/background.png);
     transform: translate3d(0, calc(var(--scrollTop) / 1.6), 0);
-    z-index: 0;      
-   }
+    z-index: 0;
+}

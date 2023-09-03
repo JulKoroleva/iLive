@@ -1,60 +1,40 @@
-
-  
-
-  .photo-popup__container_content{
-    position: relative;
-    width: 100%;
-    max-width: 700px;
-    
-    max-height: 450px;
-    border-radius: 25px 25px 0 0;
-    overflow: hidden; 
-  }
+.photo-popup__container_content {
+  position: relative;
+  width: 100%;
+  max-width: 700px;
+  max-height: 450px;
+  border-radius: 25px 25px 0 0;
+  overflow: hidden;
+}
 
 
- 
- @media screen and (min-width: 750px) and (max-width:1024px) {
-    
-  
+
+@media screen and (min-width: 750px) and (max-width:1024px) {
 
   .photo-popup__container_content {
-    width: 100%; 
+    width: 100%;
     max-width: 460px;
-    overflow: hidden; 
-     
+    overflow: hidden;
   }
 
+}
 
- }
 
- 
- @media screen and (min-width: 480px) and (max-width:750px) {
-    
-  
-
-  
+@media screen and (min-width: 480px) and (max-width:750px) {
 
   .photo-popup__container_content {
     max-height: 600px;
     max-width: 460px;
-      overflow: hidden;
+    overflow: hidden;
   }
+}
 
 
-
- }
-
- 
- @media screen and (min-width: 270px) and (max-width:480px) {
-    
-  
+@media screen and (min-width: 270px) and (max-width:480px) {
 
   .photo-popup__container_content {
-   
     width: 90vw;
     overflow: hidden;
   }
 
-  
-
- }
+}

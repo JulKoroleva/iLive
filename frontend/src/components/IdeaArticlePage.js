@@ -1,11 +1,6 @@
 import React, { useEffect, useState } from 'react';
-import { Routes, Route, Link, NavLink } from 'react-router-dom';
-
-import UpperHeader from './UpperHeader';
 import Preloader from './Preloader';
 import APIManager from '../utils/api';
-import * as auth from '../utils/auth';
-import * as constants from '../constants/constants';
 
 function IdeaArticlePage(props) {
   const [markup, setMarkup] = useState('');
@@ -17,11 +12,11 @@ function IdeaArticlePage(props) {
       const markup = await APIManager.getIdeaArticle(fileName, props.lang);
       setMarkup(markup);
     } catch (error) {
-      console.error('Error while fetching data:', error);        
+      console.error('Error while fetching data:', error);
     }
-  }; 
-  
-  useEffect(() => {  
+  };
+
+  useEffect(() => {
     getIdeaArticle();
   }, []);
 
@@ -36,10 +31,10 @@ function IdeaArticlePage(props) {
       window.removeEventListener('scroll', handleScroll);
     };
   }, []);
-  
+
   const handleLazyLoad = () => {
     const lazyImages = document.querySelectorAll('.lazy-image');
-  
+
     const imageObserver = new IntersectionObserver(entries => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
@@ -50,7 +45,7 @@ function IdeaArticlePage(props) {
         }
       });
     });
-  
+
     lazyImages.forEach(lazyImage => {
       imageObserver.observe(lazyImage);
     });
@@ -60,17 +55,17 @@ function IdeaArticlePage(props) {
     handleLazyLoad();
   }, []);
 
-  
+
 
   return (
-    <>               
-        {markup ? (
-          <div style={{display:'flex', flexDirection: 'column' , position: 'relative', width: '100vw', height: '100%'}} dangerouslySetInnerHTML = {{ __html: markup }} />
-        ) : (
-          <section className='page'><Preloader/> </section>
-          
-        )}
-      
+    <>
+      {markup ? (
+        <div style={{ display: 'flex', flexDirection: 'column', position: 'relative', width: '100vw', height: '100%' }} dangerouslySetInnerHTML={{ __html: markup }} />
+      ) : (
+        <section className='page'><Preloader /> </section>
+
+      )}
+
     </>
   );
 }

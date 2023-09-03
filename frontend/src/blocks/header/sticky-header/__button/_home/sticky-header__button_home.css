@@ -1,45 +1,47 @@
 .sticky-header__button_home {
-    position: absolute;
-    bottom: 15%;
-    right: -5%;
-    width: 20px;
-    height: 20px;
-    margin: auto;
-    color: black;
-    padding: 10px;
-    background-image: url(/src/images/header/home.png);
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-color: transparent;
-  }
+  position: absolute;
+  bottom: 15%;
+  right: -5%;
+  width: 20px;
+  height: 20px;
+  margin: auto;
+  color: black;
+  padding: 10px;
+  background-image: url(/src/images/header/home.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-color: transparent;
+}
 
 .sticky-header__button_home_fadeIn {
-    opacity: 0;
-    animation: fadeHomeIn 1s ease-in-out forwards;
-    transition: opacity 0.5s ease-in-out;
+  opacity: 0;
+  animation: fadeHomeIn 1s ease-in-out forwards;
+  transition: opacity 0.5s ease-in-out;
 }
 
 .sticky-header__button_home_fadeOut {
-    opacity: 1;
-    animation: fadeHomeOut 1s ease-in-out forwards;
-    transition: opacity 0.5s ease-in-out;
+  opacity: 1;
+  animation: fadeHomeOut 1s ease-in-out forwards;
+  transition: opacity 0.5s ease-in-out;
 }
 
-  
+
 @keyframes fadeHomeIn {
-    from {
-      opacity: 0;
-    }
-    to {
-      opacity: 1;
-    }
+  from {
+    opacity: 0;
   }
-  
-  @keyframes fadeHomeOut {
-    from {
-      opacity: 1;
-    }
-    to {
-      opacity: 0;
-    }
+
+  to {
+    opacity: 1;
   }
+}
+
+@keyframes fadeHomeOut {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+  }
+}

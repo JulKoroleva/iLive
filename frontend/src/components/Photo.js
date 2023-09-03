@@ -1,12 +1,7 @@
-import React, { useEffect, useState, useRef, useContext } from 'react';
-import { useNavigate } from 'react-router-dom';
-import { CurrentUserContext } from '../context/CurrentUserContext';
+import React from 'react';
 import { LazyLoadImage } from 'react-lazy-load-image-component';
 import 'react-lazy-load-image-component/src/effects/blur.css';
-import StickyHeader from './StickyHeader';
 import * as constants from '../constants/constants';
-import * as auth from '../utils/auth';
-import APIManager from '../utils/api';
 
 import trash from '../images/Trash.svg';
 

@@ -1,11 +1,10 @@
 @import url(./upper-header__language-button.css);
 
 .upper-header__language-flag {
-    width: 20px;
-    height: 20px;
-    border-radius: 50%;
-    border: 1px solid rgb(255, 255, 255);
-    /* рамка */
-    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
-    /* тень */
-  }
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 1px solid rgb(255, 255, 255);
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
+
+}

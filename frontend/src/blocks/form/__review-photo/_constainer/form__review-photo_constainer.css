@@ -1,10 +1,7 @@
+.form__review-photo_constainer {
+  display: flex;
+  min-width: 380px;
+  max-height: 500px;
+  overflow: hidden;
 
-.form__review-photo_constainer{
-    display: flex;
-    
-    min-width: 380px;
-    max-height: 500px;
-  
-    overflow: hidden;
-  
-  }
+}

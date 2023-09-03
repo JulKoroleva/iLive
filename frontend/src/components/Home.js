@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useContext, useRef } from 'react';
-import { Routes, Route, Link, NavLink } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 import { TranslationContext } from '../context/TranslationContext';
 import { homeMainText } from '../constants/homePageText';
@@ -51,29 +51,29 @@ function Home(props) {
       setIsSticky(scrollTop > 600);
       setIsHomeButtonVisible(true)
     };
-  
+
     window.addEventListener('scroll', handleScroll);
-  
+
     return () => {
       window.removeEventListener('scroll', handleScroll);
     };
   }, []);
 
-  
+
 
   useEffect(() => {
     const handleScroll = () => {
       const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
       setIsSticky(scrollTop > 600);
     };
-  
+
     window.addEventListener('scroll', handleScroll);
-  
+
     return () => {
-      window.removeEventListener('scroll', handleScroll); 
+      window.removeEventListener('scroll', handleScroll);
     };
   }, []);
-  
+
 
   return (
     <div className='page'>
@@ -99,7 +99,7 @@ function Home(props) {
       <SlideBar />
       <section className='home__main'>
         {props.loggedIn ? (
-          <StickyHeader isSticky={isSticky} isHomeButtonVisible={isHomeButtonVisible}  loggedOut={props.loggedOut} loggedIn={props.loggedIn} isMobile={props.isMobile}>
+          <StickyHeader isSticky={isSticky} isHomeButtonVisible={isHomeButtonVisible} loggedOut={props.loggedOut} loggedIn={props.loggedIn} isMobile={props.isMobile}>
             {props.isMobile && <LanguageButton />}
           </StickyHeader>
         ) : (
@@ -108,62 +108,62 @@ function Home(props) {
 
         <div className='home__main_text'>
           <div className='element-animation'>
-          <h2 className='home__main_text_title'>
-            {homeMainText.titleIntroduction[translation.lang]}
-          </h2> 
-          <h3 className='home__main_text_subtitle'>
-            {homeMainText.subtitleIntroduction[translation.lang]}
-          </h3> 
-          <p className='home__main_text_paragraph' style={{color:'gray', fontWeight: '500', width: '90%'}}>
-            {homeMainText.paragraphFirst[translation.lang]}
-          </p> 
+            <h2 className='home__main_text_title'>
+              {homeMainText.titleIntroduction[translation.lang]}
+            </h2>
+            <h3 className='home__main_text_subtitle'>
+              {homeMainText.subtitleIntroduction[translation.lang]}
+            </h3>
+            <p className='home__main_text_paragraph' style={{ color: 'gray', fontWeight: '500', width: '90%' }}>
+              {homeMainText.paragraphFirst[translation.lang]}
+            </p>
           </div>
 
           <div className='element-animation'>
-          <h2 className='home__main_text_title'>
-            {homeMainText.titleOne[translation.lang]}
-          </h2>
-          <p className='home__main_text_paragraph'>
-            {homeMainText.paragraphSecond[translation.lang]}
-          </p>  
-          <p className='home__main_text_paragraph'>
-            {homeMainText.paragraphThird[translation.lang]}
-          </p> 
-          <p className='home__main_text_paragraph'>
-            {homeMainText.paragraphFourth[translation.lang]}
-          </p> 
+            <h2 className='home__main_text_title'>
+              {homeMainText.titleOne[translation.lang]}
+            </h2>
+            <p className='home__main_text_paragraph'>
+              {homeMainText.paragraphSecond[translation.lang]}
+            </p>
+            <p className='home__main_text_paragraph'>
+              {homeMainText.paragraphThird[translation.lang]}
+            </p>
+            <p className='home__main_text_paragraph'>
+              {homeMainText.paragraphFourth[translation.lang]}
+            </p>
           </div>
 
           <div className='element-animation'>
-          <h2 className='home__main_text_title' style={{fontWeight:'600'}}>
-            {homeMainText.titleTwo[translation.lang]}
-          </h2>
-          <p className='home__main_text_paragraph'>
-            <NavLink to='/ideas' className='home__main_text_button'>{homeMainText.firstButton[translation.lang]}</NavLink>
-            {homeMainText.paragraphFifth[translation.lang]}
-          </p>           
-          <p className='home__main_text_paragraph' style={{color:'rgb(166 166 166 / 61%)'}}>
-            {homeMainText.paragraphSixth[translation.lang]}
-          </p>         
-          <p className='home__main_text_paragraph'>
-            <NavLink to='/articles' className='home__main_text_button'>{homeMainText.secondButton[translation.lang]}</NavLink>
-            {homeMainText.paragraphSeventh[translation.lang]}
-          </p> 
-          <p className='home__main_text_paragraph'>
-            <NavLink to='/photogallery' className='home__main_text_button'>{homeMainText.thirdButton[translation.lang]}</NavLink>
-            {homeMainText.paragraphEighth[translation.lang]}
-          </p> 
-          <p className='home__main_text_paragraph'>
-          <NavLink to='/registration' className='home__main_text_button'>{homeMainText.fourthButton[translation.lang]}</NavLink>
-          {homeMainText.paragraphNinth[translation.lang]}
-          </p> 
-          <p className='home__main_text_paragraph'>
-          {homeMainText.paragraphTenth[translation.lang]}
-          </p>
+            <h2 className='home__main_text_title' style={{ fontWeight: '600' }}>
+              {homeMainText.titleTwo[translation.lang]}
+            </h2>
+            <p className='home__main_text_paragraph'>
+              <NavLink to='/ideas' className='home__main_text_button'>{homeMainText.firstButton[translation.lang]}</NavLink>
+              {homeMainText.paragraphFifth[translation.lang]}
+            </p>
+            <p className='home__main_text_paragraph' style={{ color: 'rgb(166 166 166 / 61%)' }}>
+              {homeMainText.paragraphSixth[translation.lang]}
+            </p>
+            <p className='home__main_text_paragraph'>
+              <NavLink to='/articles' className='home__main_text_button'>{homeMainText.secondButton[translation.lang]}</NavLink>
+              {homeMainText.paragraphSeventh[translation.lang]}
+            </p>
+            <p className='home__main_text_paragraph'>
+              <NavLink to='/photogallery' className='home__main_text_button'>{homeMainText.thirdButton[translation.lang]}</NavLink>
+              {homeMainText.paragraphEighth[translation.lang]}
+            </p>
+            <p className='home__main_text_paragraph'>
+              <NavLink to='/registration' className='home__main_text_button'>{homeMainText.fourthButton[translation.lang]}</NavLink>
+              {homeMainText.paragraphNinth[translation.lang]}
+            </p>
+            <p className='home__main_text_paragraph'>
+              {homeMainText.paragraphTenth[translation.lang]}
+            </p>
           </div>
-          <div className='element-animation' style={{textAlign: 'center' , backgroundColor: 'rgba(159, 191, 208, 0.762)', borderRadius: '20px'}}>
-          <NavLink to='/registration' className='home__main_text_button' style={{backgroundColor: 'transparent'}}>{homeMainText.fifthButton[translation.lang]}</NavLink>
-        </div>
+          <div className='element-animation' style={{ textAlign: 'center', backgroundColor: 'rgba(159, 191, 208, 0.762)', borderRadius: '20px' }}>
+            <NavLink to='/registration' className='home__main_text_button' style={{ backgroundColor: 'transparent' }}>{homeMainText.fifthButton[translation.lang]}</NavLink>
+          </div>
         </div>
       </section>
       <footer className='footer'></footer>

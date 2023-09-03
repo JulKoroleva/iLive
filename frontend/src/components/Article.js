@@ -7,7 +7,7 @@ import * as constants from '../constants/constants';
 function Article(props) {
   const translation = useContext(TranslationContext);
   const [isHovered, setIsHovered] = useState(false);
- 
+
   console.log('props.article.url', `url(C:/Users/PC/Desktop/ilive/ilive/frontend/src/images/articles/bg/${props.article.url}.jpg)`)
 
   const handleMouseEnter = () => {
@@ -27,11 +27,11 @@ function Article(props) {
   return (
     <div
       className={props.isGrid ? 'article__container-grid' : 'article__container-flex'}
-      style={{backgroundImage:`url(${constants.articleBackgrounds[imageName]})`, objectFit:'cover', backgroundSize:'cover'}}
+      style={{ backgroundImage: `url(${constants.articleBackgrounds[imageName]})`, objectFit: 'cover', backgroundSize: 'cover' }}
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
     >
-      <NavLink style={{display:'flex', flexDirection:'column', justifyContent:'center', alignItems:'center', textDecoration:'none'}}
+      <NavLink style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', textDecoration: 'none' }}
         to={{
           pathname: `/articles/article/${encodeURIComponent(props.article.url)}`,
           state: { article: props.article },

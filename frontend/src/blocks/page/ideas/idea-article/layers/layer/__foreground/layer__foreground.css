@@ -1,7 +1,4 @@
-
-
-.layer__foreground{
-    background-image: url(/src/images/articles/ideasArticles/kamchatka/foreground.png);  
-    
+.layer__foreground {
+    background-image: url(/src/images/articles/ideasArticles/kamchatka/foreground.png);
     z-index: 6
-   }
+}

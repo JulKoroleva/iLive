@@ -13,33 +13,33 @@ const sharp = require('sharp');
 const LIKE_PHOTO_STATUS = require('../constants/constants')
 
 
-const getPhotogallery =  async (req, res) => {
+const getPhotogallery = async (req, res) => {
   res.setHeader('Access-Control-Allow-Origin', '*');
   res.setHeader('Access-Control-Allow-Methods', 'GET');
   res.setHeader('Access-Control-Allow-Headers', 'Content-Type');
 
 
-    try {
-      const photogallery = await Photo.find();
-  
-      // Formation of an array of objects with information about images
-      const photosData = photogallery.map(photo => ({
-        _id: photo._id,
-        user : photo.user,
-        title: photo.title,
-        description: photo.description,
-        likes: photo.likes,
-        path: photo.name, // URL to access the image
-        ownerAvatar: photo.ownerAvatar
-      }));
-      console.log('photosData:', photosData);
+  try {
+    const photogallery = await Photo.find();
 
-      res.status(200).json(photosData);
-    } catch (error) {
-      console.log('Error:', error);
-      res.status(500).json({ error: 'Error retrieving images' });
-    }
+    // Formation of an array of objects with information about images
+    const photosData = photogallery.map(photo => ({
+      _id: photo._id,
+      user: photo.user,
+      title: photo.title,
+      description: photo.description,
+      likes: photo.likes,
+      path: photo.name, // URL to access the image
+      ownerAvatar: photo.ownerAvatar
+    }));
+    console.log('photosData:', photosData);
+
+    res.status(200).json(photosData);
+  } catch (error) {
+    console.log('Error:', error);
+    res.status(500).json({ error: 'Error retrieving images' });
   }
+}
 
 
 
@@ -64,18 +64,18 @@ const postNewPhoto = async (req, res) => {
 
     if (user) {
       const newPhoto = await Photo.create({
-      title: title,
-      name: file.originalname,
-      description: description,
-      user: user._id,
-      path: file.path,
-      likes: [],
-      ownerAvatar: user.avatar
-    });
-    console.log('newPhoto:', newPhoto);
-    return newPhoto
-}
-    
+        title: title,
+        name: file.originalname,
+        description: description,
+        user: user._id,
+        path: file.path,
+        likes: [],
+        ownerAvatar: user.avatar
+      });
+      console.log('newPhoto:', newPhoto);
+      return newPhoto
+    }
+
     res.json({ success: true });
 
   } catch (error) {
@@ -86,8 +86,8 @@ const postNewPhoto = async (req, res) => {
 
 const deletePhoto = async (req, res) => {
   const { photoId } = req.params;
-  console.log('deletePhoto photoId' , photoId)
-  try{
+  console.log('deletePhoto photoId', photoId)
+  try {
     await photoService.findAndDeletePhoto(photoId);
     res.status(200).json({ success: true });
   } catch (e) {
@@ -103,18 +103,18 @@ const likePhoto = async (req, res) => {
   console.log('userData = ', userData)
   const user = await userService.findUserByJWT(userData);
   console.log('likePhoto user = ', user)
-  
-  try{
+
+  try {
     const likeStatus = await photoService.findAndLikePhoto(photoId, user._id)
-    console.log('likeStatus = ', likeStatus);   
+    console.log('likeStatus = ', likeStatus);
     if (likeStatus === LIKE_PHOTO_STATUS.unknown) {
-      console.log('The requested resource was not found = ',);   
+      console.log('The requested resource was not found = ',);
       res.status(404).json({ statusLike: likeStatus });
     } else {
       res.status(200).json({ statusLike: likeStatus });
     }
     return likeStatus;
-   
+
   } catch (e) {
     console.log('Error when to like photo =', e);
     res.status(500).json({ error: 'Error when to like photo =' });
@@ -130,4 +130,3 @@ module.exports = {
 };
 
 
-  

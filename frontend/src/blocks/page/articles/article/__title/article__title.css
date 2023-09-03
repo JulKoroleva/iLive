@@ -1,30 +1,30 @@
 .article__title {
-    width: 90%;
-    text-align: center;
-    text-transform: none;
-    text-decoration: none;
-    font-family: "Times New Roman", Times, serif;
-    font-size: 21px;
-    letter-spacing: 1.6px;
-    word-spacing: -0.4px;
-    color: #000000;
-    font-weight: 400;
-    text-decoration: none solid rgb(68, 68, 68);
-    font-style: normal;
-    font-variant: normal;
-    text-transform: none;
-  }  
+  width: 90%;
+  text-align: center;
+  text-transform: none;
+  text-decoration: none;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 21px;
+  letter-spacing: 1.6px;
+  word-spacing: -0.4px;
+  color: #000000;
+  font-weight: 400;
+  text-decoration: none solid rgb(68, 68, 68);
+  font-style: normal;
+  font-variant: normal;
+  text-transform: none;
+}
 
 
-  @media screen and (min-width: 480px) and (max-width: 750px) {
-         
-    .article__title{
-      font-size: 18px;
-    }
+@media screen and (min-width: 480px) and (max-width: 750px) {
+
+  .article__title {
+    font-size: 18px;
   }
-   
-  @media screen and (min-width: 270px) and (max-width: 480px) {   
-    .article__title{
-      font-size: 10px;
-    }
+}
+
+@media screen and (min-width: 270px) and (max-width: 480px) {
+  .article__title {
+    font-size: 10px;
   }
+}

@@ -1,14 +1,14 @@
 const mongoose = require('mongoose');
 
 const cardSchema = new mongoose.Schema({
-  key: { 
-    type: String, 
-    required: true 
-  },
- image: { 
+  key: {
     type: String,
-    required: true, 
-    },    
+    required: true
+  },
+  image: {
+    type: String,
+    required: true,
+  },
   title: {
     en: {
       type: String,
@@ -31,15 +31,15 @@ const cardSchema = new mongoose.Schema({
   isDone: {
     type: Boolean,
     default: false,
-    required: true,  
+    required: true,
   },
   link: {
-    type: Boolean,    
+    type: Boolean,
   },
   name: {
     type: String,
-    required: true, 
+    required: true,
   }
-}); 
+});
 
 module.exports = mongoose.model('idea-card', cardSchema); 

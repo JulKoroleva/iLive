@@ -1,45 +1,41 @@
 @import url(./_buttons/item__container_buttons.css);
 @import url(./_data/item__container_data.css);
 
+.item__container {
+  width: 850px;
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  grid-template-rows: 1fr;
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+  justify-items: center;
+  align-items: center;
+  margin: 30px 0;
+}
 
+.item__container_data {
+  overflow: hidden;
+}
 
-.item__container{
-    width: 850px;
-    display: grid;
-    grid-template-columns: 3fr 1fr;
-    grid-template-rows: 1fr;
-    grid-column-gap: 0px;
-    grid-row-gap: 0px;
-    justify-items: center;
-    align-items: center;
-  margin: 30px 0 ;
-  
-  }
-  .item__container_data{    
-    overflow: hidden;
-  }
-  
 @media screen and (min-width:1024px) and (max-width:1280px) {
- 
-  .item__container{
+
+  .item__container {
     display: flex;
     margin-left: 75px;
     width: 90%;
   }
-  .item__container_data{
+
+  .item__container_data {
     margin: 0 0 0 40px;
     width: 45vw;
     overflow: hidden;
   }
 
-
-
-
- }
+}
 
 @media screen and (min-width:750px) and (max-width:1024px) {
- 
-  .item__container{
+
+  .item__container {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -47,21 +43,21 @@
     position: relative;
     width: 100%;
   }
-  .item__container_data{
+
+  .item__container_data {
     margin: 0;
     width: 100%;
     max-width: 550px;
   }
-  .item__container_buttons{
+
+  .item__container_buttons {
     z-index: 433;
     position: absolute;
     bottom: 10px;
     right: 10px;
   }
 
-
-
- }
+}
 
 
 @media screen and (min-width: 480px) and (max-width:750px) {
@@ -73,12 +69,14 @@
     position: relative;
     width: 100%;
   }
+
   .item__container_data {
-    
+
     margin: 0;
     width: 100%;
     max-width: 550px;
   }
+
   .item__container_buttons {
     z-index: 433;
     position: absolute;
@@ -86,8 +84,8 @@
     right: 10px;
   }
 
-  
- }
+
+}
 
 
 
@@ -97,8 +95,8 @@
 
 
 
- @media screen and (min-width: 270px) and (max-width:480px) {
- 
+@media screen and (min-width: 270px) and (max-width:480px) {
+
   .item__container {
     display: flex;
     justify-content: center;
@@ -106,11 +104,13 @@
     position: relative;
     width: 100%;
   }
+
   .item__container_data {
     margin: 0;
     width: 100%;
     max-width: 550px;
   }
+
   .item__container_buttons {
     z-index: 433;
     position: absolute;
@@ -118,10 +118,6 @@
     right: 10px;
   }
 
- 
+
 
 }
-
-
-
-

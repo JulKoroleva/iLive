@@ -1,24 +1,23 @@
-
 .home__carousel_buttons {
-    z-index: 344;
-    display: flex;
-    flex-direction: row;    
-    align-self: end;
-    justify-content: space-between;
-    max-height: 20px;
-    max-width: 90px;
-    position: absolute;
-    right: 80px;
-    margin-right: 20px;
-    top: 280px;
-    padding: 10px;
+  z-index: 344;
+  display: flex;
+  flex-direction: row;
+  align-self: end;
+  justify-content: space-between;
+  max-height: 20px;
+  max-width: 90px;
+  position: absolute;
+  right: 80px;
+  margin-right: 20px;
+  top: 280px;
+  padding: 10px;
 }
 
-.home__carousel_buttons {      
-    right: 20px;
-    top: 275px;
-    padding: 10px;
-  }
+.home__carousel_buttons {
+  right: 20px;
+  top: 275px;
+  padding: 10px;
+}
 
 .home__carousel_left-button {
   background-image: url(/src/images/header/__slidebar/left.svg);
@@ -42,79 +41,79 @@
   height: 15px;
   margin: 0;
   opacity: 0.7;
-  
-
 }
 
 @media screen and (min-width:1024px) and (max-width:1280px) {
-    .home__carousel_buttons {
-      width: 80px;
-      right: 38px;
-      top: 52%;
-      padding: 10px;
-      margin: 0;
-  }  
+  .home__carousel_buttons {
+    width: 80px;
+    right: 38px;
+    top: 52%;
+    padding: 10px;
+    margin: 0;
+  }
 }
 
-@media screen and (min-width:750px) and (max-width:1024px) {  
- 
- 
-    
-     .home__carousel_buttons {
-      width: 50px;
-      right: 42px;
-      top: 48%;
-      padding: 10px;
-      margin: 0;
+@media screen and (min-width:750px) and (max-width:1024px) {
+
+
+
+  .home__carousel_buttons {
+    width: 50px;
+    right: 42px;
+    top: 48%;
+    padding: 10px;
+    margin: 0;
   }
 
 
 
-  .home__carousel_right-button{
+  .home__carousel_right-button {
     width: 20px;
   }
-  .home__carousel_left-button{
+
+  .home__carousel_left-button {
     width: 20px;
   }
-   }
-
-
-
-   @media screen and (min-width: 480px) and (max-width:750px) {
-
-
-    .home__carousel_buttons {
-      width: 35px;
-      right: 30px;
-      top: 50%;
-      padding: 10px;
-      margin: 0;
-  }
-
-
-  .home__carousel_right-button{
-    width: 15px;
-  }
-  .home__carousel_left-button{
-    width: 15px;
-  }
 }
-   
-   @media screen and (min-width: 270px) and (max-width:480px) {
-   
-    .home__carousel_buttons {
-        width: 35px;
-        right: 6px;
-        top: 55%;
-        padding: 10px;
-        margin: 0;
-   }
 
-   .home__carousel_right-button{
+
+
+@media screen and (min-width: 480px) and (max-width:750px) {
+
+
+  .home__carousel_buttons {
+    width: 35px;
+    right: 30px;
+    top: 50%;
+    padding: 10px;
+    margin: 0;
+  }
+
+
+  .home__carousel_right-button {
     width: 15px;
   }
-  .home__carousel_left-button{
+
+  .home__carousel_left-button {
     width: 15px;
   }
 }
 
+@media screen and (min-width: 270px) and (max-width:480px) {
+
+  .home__carousel_buttons {
+    width: 35px;
+    right: 6px;
+    top: 55%;
+    padding: 10px;
+    margin: 0;
+  }
+
+  .home__carousel_right-button {
+    width: 15px;
+  }
+
+  .home__carousel_left-button {
+    width: 15px;
+  }
+}

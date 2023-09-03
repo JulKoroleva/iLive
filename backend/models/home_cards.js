@@ -1,20 +1,20 @@
 const mongoose = require('mongoose');
 
 const cardSchema = new mongoose.Schema({
- image: { 
+  image: {
     type: String,
-    required: true, 
-    },
+    required: true,
+  },
   title: {
-    en : { 
+    en: {
       type: String,
-      required: true, 
-      },
-    ru : { 
+      required: true,
+    },
+    ru: {
       type: String,
-      required: true, 
-      }, 
+      required: true,
+    },
   }
-}); 
+});
 
 module.exports = mongoose.model('home-card', cardSchema); 

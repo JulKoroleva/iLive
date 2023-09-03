@@ -1,12 +1,12 @@
-.page__construction_image{
+.page__construction_image {
     position: absolute;
     z-index: 2;
     left: 30px
 }
 
-@media screen and (min-width: 270px) and  (max-width:750px){
-    .page__construction_image{
-       width: 60vw;
-       left: 15%
+@media screen and (min-width: 270px) and (max-width:750px) {
+    .page__construction_image {
+        width: 60vw;
+        left: 15%
     }
 }

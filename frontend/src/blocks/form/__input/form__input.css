@@ -1,46 +1,46 @@
 @import url(./_description/form__input_description.css);
 @import url(./_title/form__input_title.css);
 
-   
-      .form__input{
-        outline: none;
-       
-        text-align: center;
-        outline: none;
-        padding: 5px;
-        text-align: center;
-        margin: 0;
-        font-size: 15px;
-        letter-spacing: 0px;
-        word-spacing: 3.4px;
-        color: #535353;
-        background-color: transparent;
-        font-weight: normal;
-        text-decoration: none;
-        font-style: normal;
-        font-variant: small-caps;
-        text-transform: none;
-        resize: none; 
-        overflow-y: scroll;
-        overflow-x:unset;
-        overflow-wrap: break-word; /* Wrap the text to the next line if it exceeds the width */
-      }
+
+.form__input {
+  outline: none;
+  text-align: center;
+  outline: none;
+  padding: 5px;
+  text-align: center;
+  margin: 0;
+  font-size: 15px;
+  letter-spacing: 0px;
+  word-spacing: 3.4px;
+  color: #535353;
+  background-color: transparent;
+  font-weight: normal;
+  text-decoration: none;
+  font-style: normal;
+  font-variant: small-caps;
+  text-transform: none;
+  resize: none;
+  overflow-y: scroll;
+  overflow-x: unset;
+  overflow-wrap: break-word;
+  /* Wrap the text to the next line if it exceeds the width */
+}
 
 
-      .form__input-img{
-        width: 200px;
-        height: 200px;
-        display: none;
-        background-image: url(/src/images/photogallery/add-image__button.png);
-      }
-      
+.form__input-img {
+  width: 200px;
+  height: 200px;
+  display: none;
+  background-image: url(/src/images/photogallery/add-image__button.png);
+}
 
 
-      .form__input_email,
+
+.form__input_email,
 .form__input_password {
-    border: none;
-    border-bottom: 1px solid black;
-    outline: none;
+  border: none;
+  border-bottom: 1px solid black;
+  outline: none;
 }
 
 
@@ -52,59 +52,45 @@
 }
 
 
-      
-      
-      .file-input-container {
-        animation: fadeIn 0.5s ease-in-out; 
-      }
-         
-      
-    
 
 
-
-
-      @keyframes fadeIn {
-        from {
-          opacity: 0;
-          transform: translateY(-10px);
-        }
-        to {
-          opacity: 1;
-          transform: translateY(0);
-        }
-      }
-      
-    
-      
-
-
-@media screen and (min-width:750px) and (max-width:1024px) {
- 
- 
-  
+.file-input-container {
+  animation: fadeIn 0.5s ease-in-out;
 }
 
+
+
+
+
+
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 
 
 @media screen and (min-width:480px) and (max-width:750px) {
- 
- 
-    .form__input_email,
-    .form__input_password {
-   width: 75%;
-   
- }
- 
- 
+
+  .form__input_email,
+  .form__input_password {
+    width: 75%;
+  }
+
 }
 
 @media screen and (min-width:270px) and (max-width:480px) {
- 
 
-    .form__input_email,
-    .form__input_password {
-   width: 50vw;
- }
- 
+  .form__input_email,
+  .form__input_password {
+    width: 50vw;
+  }
+
 }

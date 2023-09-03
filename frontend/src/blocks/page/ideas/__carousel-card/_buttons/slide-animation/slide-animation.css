@@ -2,7 +2,7 @@
 @import url(./slide-right.css);
 @import url(./slide-up.css);
 
-  .slide-animation {
-    animation-duration: 2.5s;
-    animation-timing-function: ease-out;
-  }
+.slide-animation {
+  animation-duration: 2.5s;
+  animation-timing-function: ease-out;
+}

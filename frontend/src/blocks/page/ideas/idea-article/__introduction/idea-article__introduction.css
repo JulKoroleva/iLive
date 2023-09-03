@@ -1,23 +1,18 @@
+.idea-article__introduction {
+  font-size: 30px;
+  color: rgba(240, 248, 255, 0.694);
+}
 
+@media screen and (min-width: 480px) and (max-width:1024px) {
+  .idea-article__introduction {
+    font-size: 18px;
 
-.idea-article__introduction{
-    font-size: 30px;
-    color: rgba(240, 248, 255, 0.694);
+  }
+}
+
+@media screen and (min-width: 270px) and (max-width:480px) {
+  .idea-article__introduction {
+    font-size: 12px;
   }
 
-  @media screen and (min-width: 480px) and  (max-width:1024px) {
-    .idea-article__introduction {   
-      font-size: 18px;
-    
-    }  
-   }
-
-
-
-  @media screen and (min-width: 270px) and  (max-width:480px) {
-    .idea-article__introduction {   
-   font-size: 12px;
-    }
-
-  
-   }
+}

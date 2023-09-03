@@ -1,4 +1,4 @@
-.article__introduction_tex{
+.article__introduction_tex {
     font-family: "Times New Roman", Times, serif;
     font-size: 25px;
     letter-spacing: -0.2px;
@@ -7,6 +7,5 @@
     font-weight: 400;
     text-decoration: none solid rgb(68, 68, 68);
     font-style: normal;
-
     text-transform: none;
 }

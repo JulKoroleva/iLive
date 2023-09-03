@@ -1,38 +1,29 @@
-  
   .home__carousel_image {
-    
-
     height: 100%;
   }
 
-  @media screen and (min-width:750px) and (max-width:1024px) {  
-
+  @media screen and (min-width:750px) and (max-width:1024px) {
 
     .home__carousel_image {
       height: 90%;
     }
 
- 
-   }
+  }
 
 
 
-   @media screen and (min-width: 480px) and (max-width:750px) {
+  @media screen and (min-width: 480px) and (max-width:750px) {
 
+    .home__carousel_image {
+      height: 70%;
+    }
 
-      .home__carousel_image {
-        height: 70%;
-       }
+  }
 
-}
-   
-   @media screen and (min-width: 270px) and (max-width:480px) {
+  @media screen and (min-width: 270px) and (max-width:480px) {
 
-
-      .home__carousel_image {
-        height: 65%;
-        margin-left: 0px;
-       }
-   
- 
-}
+    .home__carousel_image {
+      height: 65%;
+      margin-left: 0px;
+    }
+  }

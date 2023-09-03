@@ -1,6 +1,5 @@
 import React, { useEffect, useState, useRef, useContext } from 'react';
 import { useNavigate, NavLink } from 'react-router-dom';
-import { CurrentUserContext } from '../context/CurrentUserContext';
 import { TranslationContext } from '../context/TranslationContext';
 import { LazyLoadImage } from 'react-lazy-load-image-component';
 import 'react-lazy-load-image-component/src/effects/blur.css';
@@ -88,7 +87,7 @@ const Photogallery = (props) => {
     } finally {
       setTimeout(() => {
         setIsLoading(false);
-      }, 200);
+      }, 400);
     }    
   };
   
