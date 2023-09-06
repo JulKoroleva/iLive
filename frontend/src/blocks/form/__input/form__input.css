@@ -38,6 +38,7 @@
 
 .form__input_email,
 .form__input_password {
+  position: relative;
   border: none;
   border-bottom: 1px solid black;
   outline: none;

@@ -6,7 +6,7 @@ export const getJwtFromLS = () => {
 };
 
 export const register = async (password, email) => {
-  return fetch(`${constants.baseURL}${constants.API_paths.registration}`, {
+  return fetch(`${constants.baseURL}${constants.API_paths.signup}`, {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',

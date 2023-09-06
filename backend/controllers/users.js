@@ -30,7 +30,7 @@ const registration = async (req, res, next) => {
 }
 
 
-const login = async (req, res) => {
+const login = async (req, res, next) => {
   res.setHeader('Access-Control-Allow-Origin', '*');
   res.setHeader('Access-Control-Allow-Methods', 'GET');
   res.setHeader('Access-Control-Allow-Headers', 'Content-Type');
@@ -44,8 +44,8 @@ const login = async (req, res) => {
 
     return res.json(userData);
   } catch (e) {
-    console.log(e);
-
+    console.log(e)
+    next(e);
   }
 }
 

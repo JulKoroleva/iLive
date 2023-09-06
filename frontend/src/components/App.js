@@ -15,7 +15,7 @@ import IdeaArticlePage from './IdeaArticlePage';
 import UsefulArticles from './UsefulArticles';
 import ArticlePage from './ArticlePage';
 import Login from './Login';
-import Registration from './Registration';
+import Signup from './Signup';
 import Logout from './Logout';
 import Photogallery from './Photogallery';
 import UnderConstruction from './UnderConstruction';
@@ -121,7 +121,6 @@ const App = () => {
       })
       .catch(err => {
         console.error(err);
-
         setErrMessage(translations[lang].login.errMessage);
 
       });
@@ -178,7 +177,7 @@ const App = () => {
             <Route path="/tests" element={<UnderConstruction loggedIn={loggedIn} isMobile={isMobile} />} />
             <Route path="/photogallery" element={<Photogallery loggedOut={handleLogOut} loggedIn={loggedIn} isMobile={isMobile} />} />
             <Route path="/login" element={<Login onLogin={handleLogin} loggedIn={loggedIn} errMessage={errMessage} isMobile={isMobile} />} />
-            <Route path="/registration" element={<Registration onRegister={handleRegister} errMessage={errMessage} isMobile={isMobile} />} />
+            <Route path="/signup" element={<Signup onRegister={handleRegister} errMessage={errMessage} isMobile={isMobile} />} />
             <Route path="/logout" element={<Logout />} />
           </Routes>
 

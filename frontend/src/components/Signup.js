@@ -1,4 +1,4 @@
-import React, { useState, useRef, useContext  } from 'react';
+import React, { useState, useRef, useContext } from 'react';
 import { NavLink, useNavigate } from 'react-router-dom';
 
 import { TranslationContext } from '../context/TranslationContext';
@@ -8,14 +8,17 @@ import UpperHeader from './UpperHeader';
 import Form from './Form';
 import envelope from '../images/reg-log/envelope.png';
 import padlock from '../images/reg-log/padlock.png';
+import hide_eye from '../images/reg-log/hide_eye.png';
+import show_eye from '../images/reg-log/show_eye.png';
 
-function Registration(props) {
+function Signup(props) {
 
   const translation = useContext(TranslationContext);
 
   const [emailShake, setEmailShake] = useState(false);
   const [passwordShake, setPasswordShake] = useState(false);
-  const [passwordLengthError, setPasswordLengthError] = useState(false); 
+  const [passwordLengthError, setPasswordLengthError] = useState(false);
+  const [showPassword, setShowPassword] = useState(false);
 
   const emailImageRef = useRef(null);
   const passwordImageRef = useRef(null);
@@ -71,6 +74,7 @@ function Registration(props) {
         setPasswordShake(false);
         passwordImageRef.current.parentElement.classList.remove('shake-border');
       }
+      navigate('/login', { replace: true });
       return;
     }
 
@@ -98,13 +102,13 @@ function Registration(props) {
     <>
       <section className='page'>
         <UpperHeader>
-          <nav style={{width:'100%', display:'flex', flexDirection:'row', justifyContent:'space-between', alignItems:'center'}}>
-          <LanguageButton />
-          <NavLink to='/' className='upper-header__button_reglog_home'>
-            {translation.upperHeader.homePage}
-          </NavLink>
+          <nav style={{ width: '100%', display: 'flex', flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center' }}>
+            <LanguageButton />
+            <NavLink to='/' className='upper-header__button_reglog_home'>
+              {translation.upperHeader.homePage}
+            </NavLink>
           </nav>
-          
+
         </UpperHeader>
 
         <Form submit={translation.signup.submitButton} onSubmit={handleSubmit} title={translation.signup.title}>
@@ -143,14 +147,21 @@ function Registration(props) {
               value={data.password}
               onChange={handleChange}
               className={`form__input form__input_password ${passwordShake ? 'shake-input' : ''}`}
-              type='password'
+              type={showPassword ? 'text' : 'password'}
               name='password'
               minLength='8'
-              maxLength='400'
+              maxLength='20'
               placeholder='password'
               autoComplete='off'
               required
             />
+            <button
+              type="button"
+              className="password-toggle-button"
+              onClick={() => setShowPassword(!showPassword)}
+              style={{backgroundImage: `url(${showPassword ? hide_eye : show_eye})`}}
+            >
+            </button>
           </label>
           {!props.errMessage && passwordLengthError && <p className='error-message'>{translation.signup.passwordLengthError}</p>}
           {props.errMessage && <p className='error-message'>{props.errMessage}</p>}
@@ -161,4 +172,4 @@ function Registration(props) {
   );
 }
 
-export default Registration;
+export default Signup;

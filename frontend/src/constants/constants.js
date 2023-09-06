@@ -11,7 +11,7 @@ export const baseURL = `http://${hostname}:4000`;
 console.log('baseURL = ', baseURL)
 
 export const API_paths = {
-  registration: '/registration',
+  signup: '/signup',
   login: '/login',
   refresh: '/refresh',
   logout: '/logout',

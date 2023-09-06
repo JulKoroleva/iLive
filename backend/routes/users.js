@@ -5,7 +5,7 @@ const { registration, login, logout, ckechToken, changeUserAvatar, getUserData, 
 const auth = require('../middlewares/auth');
 const avatarMulter = require('../middlewares/userAvatar')
 
-router.post('/registration', celebrate({
+router.post('/signup', celebrate({
   body: Joi.object().keys({
     email: Joi.string().email().required(),
     password: Joi.string().min(8).required(),

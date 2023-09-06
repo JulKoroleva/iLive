@@ -8,7 +8,7 @@ function Form(props) {
         {props.children}
       </div>
       <div className='form__button'>
-        <button className="form__submit-button" type="submit">{props.submit}</button>
+        <button data-testid="test-button"  className="form__submit-button" type="submit">{props.submit}</button>
       </div>
     </form>
   );

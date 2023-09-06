@@ -7,6 +7,8 @@ import UpperHeader from './UpperHeader';
 import Form from './Form';
 import envelope from '../images/reg-log/envelope.png';
 import key from '../images/reg-log/key.png';
+import hide_eye from '../images/reg-log/hide_eye.png';
+import show_eye from '../images/reg-log/show_eye.png';
 
 function Login(props) {
 
@@ -15,6 +17,7 @@ function Login(props) {
   const [emailShake, setEmailShake] = useState(false);
   const [passwordShake, setPasswordShake] = useState(false);
   const [passwordLengthError, setPasswordLengthError] = useState(false);
+  const [showPassword, setShowPassword] = useState(false);
 
   const emailImageRef = useRef(null);
   const passwordImageRef = useRef(null);
@@ -72,6 +75,7 @@ function Login(props) {
         setPasswordShake(false);
         passwordImageRef.current.parentElement.classList.remove('shake-border');
       }
+      
       return;
     }
 
@@ -134,19 +138,26 @@ function Login(props) {
               value={data.password}
               onChange={handleChange}
               className={`form__input form__input_password ${passwordShake ? 'shake-input' : ''}`}
-              type='password'
+              type={showPassword ? 'text' : 'password'}
               name='password'
               minLength='8'
-              maxLength='400'
+              maxLength='20'
               placeholder='password'
               autoComplete='off'
               required
             />
+            <button
+              type="button"
+              className="password-toggle-button"
+              onClick={() => setShowPassword(!showPassword)}
+              style={{backgroundImage: `url(${showPassword ? hide_eye : show_eye})`}}
+            >
+            </button>
           </label>
           {!props.errMessage && passwordLengthError && <p className='error-message'>{translation.login.passwordLengthError}</p>}
           {props.errMessage && <p className='error-message'>{props.errMessage}</p>}
         </Form>
-        <NavLink to='/registration' style={{ marginTop: '40px' }} className='registration__button'>{translation.login.notRegistered}</NavLink>
+        <NavLink to='/signup' style={{ marginTop: '40px' }} className='signup__button'>{translation.login.notRegistered}</NavLink>
       </section>
     </>
   );

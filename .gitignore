@@ -12,6 +12,7 @@ README.md
 
 # testing
 /frontend/coverage
+/frontend/.vscode
 
 # production
 /frontend/build

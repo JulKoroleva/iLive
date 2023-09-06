@@ -78,6 +78,7 @@ function LanguageButton() {
   return (
     <nav style={{ position: "relative" }} ref={menuRef} onMouseLeave={handleMenuLeave}>
       <button
+        data-testid="test-lang-button"
         className='upper-header__button_language_menu'
         onMouseEnter={handleLanguageButtonHover}
       >
@@ -98,7 +99,7 @@ function LanguageButton() {
               </button>
             </li>
             <li>
-              <button className='upper-header__language-button' onClick={() => handleLanguageSelect('ru')}>
+              <button data-testid="test-ru-lang-button" className='upper-header__language-button' onClick={() => handleLanguageSelect('ru')}>
                 <img src={languageFlags['ru']} alt="Русский" className="upper-header__language-flag" />
                 <h4 style={{margin: "0 10px ", fontWeight: "normal"}}>Русский</h4>
               </button>

@@ -89,7 +89,7 @@ function Home(props) {
             </>
           ) : (
             <>
-              <NavLink to='/registration' className='upper-header__button_signup'>{translation.signup.homeRegButton}</NavLink>
+              <NavLink to='/signup' className='upper-header__button_signup'>{translation.signup.homeRegButton}</NavLink>
               <NavLink to='/login' className='upper-header__button_signin'>{translation.login.homeLogButton}</NavLink>
             </>
           )}
@@ -154,7 +154,7 @@ function Home(props) {
               {homeMainText.paragraphEighth[translation.lang]}
             </p>
             <p className='home__main_text_paragraph'>
-              <NavLink to='/registration' className='home__main_text_button'>{homeMainText.fourthButton[translation.lang]}</NavLink>
+              <NavLink to='/signup' className='home__main_text_button'>{homeMainText.fourthButton[translation.lang]}</NavLink>
               {homeMainText.paragraphNinth[translation.lang]}
             </p>
             <p className='home__main_text_paragraph'>
@@ -162,7 +162,7 @@ function Home(props) {
             </p>
           </div>
           <div className='element-animation' style={{ textAlign: 'center', backgroundColor: 'rgba(159, 191, 208, 0.762)', borderRadius: '20px' }}>
-            <NavLink to='/registration' className='home__main_text_button' style={{ backgroundColor: 'transparent' }}>{homeMainText.fifthButton[translation.lang]}</NavLink>
+            <NavLink to='/signup' className='home__main_text_button' style={{ backgroundColor: 'transparent' }}>{homeMainText.fifthButton[translation.lang]}</NavLink>
           </div>
         </div>
       </section>
