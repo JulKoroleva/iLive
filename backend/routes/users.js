@@ -7,7 +7,7 @@ const avatarMulter = require('../middlewares/userAvatar')
 
 router.post('/signup', celebrate({
   body: Joi.object().keys({
-    email: Joi.string().email().required(),
+    email: Joi.string().email().min(4).required(),
     password: Joi.string().min(8).required(),
   }),
 }), registration);
@@ -28,4 +28,5 @@ router.post('/profile/avatar', auth, avatarMulter.single('avatar'), changeUserAv
 
 router.post('/profile/drawing', auth, postUserDrawing);
 router.get('/profile/drawing', auth, getDrawing);
+
 module.exports = router;

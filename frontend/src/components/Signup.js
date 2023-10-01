@@ -29,7 +29,6 @@ function Signup(props) {
   };
 
   const [data, setData] = React.useState(initialData);
-  const navigate = useNavigate();
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -74,7 +73,14 @@ function Signup(props) {
         setPasswordShake(false);
         passwordImageRef.current.parentElement.classList.remove('shake-border');
       }
-      navigate('/login', { replace: true });
+      return;
+    }
+
+    
+    if (data.email.length < 4) {
+      setEmailShake(true);
+      emailImageRef.current.classList.add('shake');
+      emailImageRef.current.parentElement.classList.add('shake-border');
       return;
     }
 

@@ -28,8 +28,6 @@ function Login(props) {
   };
 
   const [data, setData] = useState(initialData);
-  const navigate = useNavigate();
-  
   const handleChange = (e) => {
     const { name, value } = e.target;
     setData((data) => ({

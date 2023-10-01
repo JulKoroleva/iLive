@@ -22,6 +22,9 @@ import UnderConstruction from './UnderConstruction';
 
 
 const App = () => {
+  
+  const [isMobile, setIsMobile] = useState(window.innerWidth <= constants.WINDOW_INNERWIDHT);
+  
   const [lang, setLang] = useState(() => {
     // Try to get the selected language from localStorage
     const storedLanguage = localStorage.getItem('selectedLanguage');
@@ -93,8 +96,12 @@ const App = () => {
     }
   };
 
-
   const handleRegister = async (email, password) => {
+    if (!email || !password) {
+      setErrMessage(translations[lang].signup.requiredFieldsError);
+      return;
+    }
+  
     auth.register(password, email)
       .then(response => {
         if (response) {
@@ -106,28 +113,27 @@ const App = () => {
         setErrMessage(translations[lang].signup.errMessage);
       });
   };
-
-
-
+  
   const handleLogin = async (email, password) => {
+    if (!email || !password) {
+      setErrMessage(translations[lang].login.requiredFieldsError);
+      return;
+    }
+  
     auth.login(email, password)
       .then((response) => {
         console.log('response = ', response)
         if (response.ok) {
           setLoggedIn(true);
           navigate('/ideas', { replace: true });
-
         }
       })
       .catch(err => {
         console.error(err);
         setErrMessage(translations[lang].login.errMessage);
-
       });
-
   }
 
-  const [isMobile, setIsMobile] = useState(window.innerWidth <= constants.WINDOW_INNERWIDHT);
 
   useEffect(() => {
     const handleResize = () => {

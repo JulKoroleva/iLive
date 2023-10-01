@@ -15,7 +15,7 @@ const registration = async (req, res, next) => {
   res.setHeader('Access-Control-Allow-Methods', 'GET');
   res.setHeader('Access-Control-Allow-Headers', 'Content-Type');
   res.setHeader('Access-Control-Allow-Credentials', 'true');
-
+  console.log('Received registration request:', req.body);
   try {
     const { email, password } = req.body
     console.log('req.body = ', req.body)
