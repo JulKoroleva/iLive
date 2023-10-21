@@ -4,6 +4,10 @@
 <p>💡 iLive is a platform dedicated to individuals striving for self-improvement. This website offers a diverse range of resources to inspire and uplift users without imposing any obligations. The main goal is to provide a space where users can explore articles, engage with creative ideas, share their experiences through photos, and track their personal growth over time. iLive offers a variety of content and features to inspire and empower users on their personal growth journey. This README provides a comprehensive overview of the iLive project, its various pages, and functionalities.</p>
 </div>
 
+<div align="center">
+<a href="http://46.72.127.251:3000/home" target="_blank" style="text-decoration:none;" >VIEW THE RUNNING APP</a>
+</div>
+
 ## Сontent
 Here's a detailed guide to the various sections and features of the iLive website:
 
